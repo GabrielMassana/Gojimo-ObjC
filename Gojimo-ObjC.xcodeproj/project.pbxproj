@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F0E3F0F9D85E0B2C4D1AD1B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DA40EAE42271A34225C5E7 /* Pods.framework */; };
+		7A7189CA1CA312520011FD58 /* GOJAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189BB1CA312520011FD58 /* GOJAppDelegate.m */; };
+		7A7189D31CA313310011FD58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7189D21CA313310011FD58 /* Assets.xcassets */; };
+		7A7189DC1CA313580011FD58 /* GOJQualificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189DB1CA313580011FD58 /* GOJQualificationsViewController.m */; };
+		7A7189E21CA3145C0011FD58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189C51CA312520011FD58 /* main.m */; };
+		7A7189E51CA317640011FD58 /* GOJRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189E41CA317640011FD58 /* GOJRootNavigationController.m */; };
+		7A7189E81CA31C480011FD58 /* Gojimo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189E61CA31C480011FD58 /* Gojimo.xcdatamodeld */; };
+		7A7189EB1CA31E0B0011FD58 /* GOJAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189EA1CA31E0B0011FD58 /* GOJAPIManager.m */; };
+		7A7189EE1CA31E770011FD58 /* GOJQualificationsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189ED1CA31E770011FD58 /* GOJQualificationsAPIManager.m */; };
+		7A7189F11CA31EDF0011FD58 /* GOJRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189F01CA31EDF0011FD58 /* GOJRequest.m */; };
+		7A7189F41CA31F3A0011FD58 /* GOJQualificationsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189F31CA31F3A0011FD58 /* GOJQualificationsRequest.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E0E385334E90A882E82B10D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		7A71899F1CA3111F0011FD58 /* Gojimo-ObjC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gojimo-ObjC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A7189BA1CA312520011FD58 /* GOJAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJAppDelegate.h; sourceTree = "<group>"; };
+		7A7189BB1CA312520011FD58 /* GOJAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJAppDelegate.m; sourceTree = "<group>"; };
+		7A7189C41CA312520011FD58 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A7189C51CA312520011FD58 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7A7189D21CA313310011FD58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A7189DA1CA313580011FD58 /* GOJQualificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsViewController.h; sourceTree = "<group>"; };
+		7A7189DB1CA313580011FD58 /* GOJQualificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsViewController.m; sourceTree = "<group>"; };
+		7A7189E11CA313E10011FD58 /* Gojimo-ObjC-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gojimo-ObjC-Prefix.pch"; sourceTree = "<group>"; };
+		7A7189E31CA317640011FD58 /* GOJRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJRootNavigationController.h; sourceTree = "<group>"; };
+		7A7189E41CA317640011FD58 /* GOJRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJRootNavigationController.m; sourceTree = "<group>"; };
+		7A7189E71CA31C480011FD58 /* Gojimo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gojimo.xcdatamodel; sourceTree = "<group>"; };
+		7A7189E91CA31E0B0011FD58 /* GOJAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJAPIManager.h; sourceTree = "<group>"; };
+		7A7189EA1CA31E0B0011FD58 /* GOJAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJAPIManager.m; sourceTree = "<group>"; };
+		7A7189EC1CA31E770011FD58 /* GOJQualificationsAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsAPIManager.h; sourceTree = "<group>"; };
+		7A7189ED1CA31E770011FD58 /* GOJQualificationsAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsAPIManager.m; sourceTree = "<group>"; };
+		7A7189EF1CA31EDF0011FD58 /* GOJRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJRequest.h; sourceTree = "<group>"; };
+		7A7189F01CA31EDF0011FD58 /* GOJRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJRequest.m; sourceTree = "<group>"; };
+		7A7189F21CA31F3A0011FD58 /* GOJQualificationsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsRequest.h; sourceTree = "<group>"; };
+		7A7189F31CA31F3A0011FD58 /* GOJQualificationsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsRequest.m; sourceTree = "<group>"; };
+		C33E5DAA0BF9774096280871 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		D7DA40EAE42271A34225C5E7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7A71899C1CA3111F0011FD58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F0E3F0F9D85E0B2C4D1AD1B /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		316ECB674200B72309C83D8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E0E385334E90A882E82B10D /* Pods.debug.xcconfig */,
+				C33E5DAA0BF9774096280871 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D3FE3B76C1F7FEF43563179 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7DA40EAE42271A34225C5E7 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A7189961CA3111F0011FD58 = {
+			isa = PBXGroup;
+			children = (
+				7A7189A11CA3111F0011FD58 /* Gojimo-ObjC */,
+				7A7189A01CA3111F0011FD58 /* Products */,
+				316ECB674200B72309C83D8E /* Pods */,
+				6D3FE3B76C1F7FEF43563179 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7A7189A01CA3111F0011FD58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A71899F1CA3111F0011FD58 /* Gojimo-ObjC.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A7189A11CA3111F0011FD58 /* Gojimo-ObjC */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189B91CA312520011FD58 /* AppDelegate */,
+				7A7189BC1CA312520011FD58 /* Categories */,
+				7A7189BD1CA312520011FD58 /* Model */,
+				7A7189BE1CA312520011FD58 /* Networking */,
+				7A7189BF1CA312520011FD58 /* Resources */,
+				7A7189C21CA312520011FD58 /* Services */,
+				7A7189C31CA312520011FD58 /* SupportingFiles */,
+				7A7189C61CA312520011FD58 /* ViewControllers */,
+				7A7189C91CA312520011FD58 /* Views */,
+			);
+			path = "Gojimo-ObjC";
+			sourceTree = "<group>";
+		};
+		7A7189B91CA312520011FD58 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189BA1CA312520011FD58 /* GOJAppDelegate.h */,
+				7A7189BB1CA312520011FD58 /* GOJAppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		7A7189BC1CA312520011FD58 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		7A7189BD1CA312520011FD58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189CF1CA312D20011FD58 /* CoreData */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A7189BE1CA312520011FD58 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189D41CA3133A0011FD58 /* APIs */,
+				7A7189D71CA3133A0011FD58 /* Requests */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7A7189BF1CA312520011FD58 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189C11CA312520011FD58 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7A7189C11CA312520011FD58 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189D21CA313310011FD58 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7A7189C21CA312520011FD58 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7A7189C31CA312520011FD58 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189C41CA312520011FD58 /* Info.plist */,
+				7A7189C51CA312520011FD58 /* main.m */,
+				7A7189E11CA313E10011FD58 /* Gojimo-ObjC-Prefix.pch */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		7A7189C61CA312520011FD58 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189D91CA313580011FD58 /* Qualifications */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7A7189C91CA312520011FD58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189DD1CA3138B0011FD58 /* NavigationController */,
+				7A7189DE1CA3138B0011FD58 /* TableView */,
+				7A7189DF1CA3138B0011FD58 /* TableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A7189CF1CA312D20011FD58 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189D01CA312D20011FD58 /* ManagedObjects */,
+				7A7189D11CA312D20011FD58 /* Model */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7A7189D01CA312D20011FD58 /* ManagedObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ManagedObjects;
+			sourceTree = "<group>";
+		};
+		7A7189D11CA312D20011FD58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189E61CA31C480011FD58 /* Gojimo.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7A7189D41CA3133A0011FD58 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189D51CA3133A0011FD58 /* Abstract */,
+				7A7189D61CA3133A0011FD58 /* Qualifications */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		7A7189D51CA3133A0011FD58 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189E91CA31E0B0011FD58 /* GOJAPIManager.h */,
+				7A7189EA1CA31E0B0011FD58 /* GOJAPIManager.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		7A7189D61CA3133A0011FD58 /* Qualifications */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189EC1CA31E770011FD58 /* GOJQualificationsAPIManager.h */,
+				7A7189ED1CA31E770011FD58 /* GOJQualificationsAPIManager.m */,
+			);
+			path = Qualifications;
+			sourceTree = "<group>";
+		};
+		7A7189D71CA3133A0011FD58 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189D81CA3133A0011FD58 /* Abstract */,
+				7A7189E01CA313A80011FD58 /* Qualifications */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		7A7189D81CA3133A0011FD58 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189EF1CA31EDF0011FD58 /* GOJRequest.h */,
+				7A7189F01CA31EDF0011FD58 /* GOJRequest.m */,
+			);
+			path = Abstract;
+			sourceTree = "<group>";
+		};
+		7A7189D91CA313580011FD58 /* Qualifications */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189DA1CA313580011FD58 /* GOJQualificationsViewController.h */,
+				7A7189DB1CA313580011FD58 /* GOJQualificationsViewController.m */,
+			);
+			path = Qualifications;
+			sourceTree = "<group>";
+		};
+		7A7189DD1CA3138B0011FD58 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189E31CA317640011FD58 /* GOJRootNavigationController.h */,
+				7A7189E41CA317640011FD58 /* GOJRootNavigationController.m */,
+			);
+			path = NavigationController;
+			sourceTree = "<group>";
+		};
+		7A7189DE1CA3138B0011FD58 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		7A7189DF1CA3138B0011FD58 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		7A7189E01CA313A80011FD58 /* Qualifications */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189F21CA31F3A0011FD58 /* GOJQualificationsRequest.h */,
+				7A7189F31CA31F3A0011FD58 /* GOJQualificationsRequest.m */,
+			);
+			path = Qualifications;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7A71899E1CA3111F0011FD58 /* Gojimo-ObjC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A7189B61CA3111F0011FD58 /* Build configuration list for PBXNativeTarget "Gojimo-ObjC" */;
+			buildPhases = (
+				AC50705982DEADFC1FB4211F /* Check Pods Manifest.lock */,
+				7A71899B1CA3111F0011FD58 /* Sources */,
+				7A71899C1CA3111F0011FD58 /* Frameworks */,
+				7A71899D1CA3111F0011FD58 /* Resources */,
+				BC3B6A19F56AA442346743F6 /* Embed Pods Frameworks */,
+				FF3ACF184A137E8EDCFC589D /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gojimo-ObjC";
+			productName = "Gojimo-ObjC";
+			productReference = 7A71899F1CA3111F0011FD58 /* Gojimo-ObjC.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7A7189971CA3111F0011FD58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GOJ;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Gabriel Massana";
+				TargetAttributes = {
+					7A71899E1CA3111F0011FD58 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 7A71899A1CA3111F0011FD58 /* Build configuration list for PBXProject "Gojimo-ObjC" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7A7189961CA3111F0011FD58;
+			productRefGroup = 7A7189A01CA3111F0011FD58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7A71899E1CA3111F0011FD58 /* Gojimo-ObjC */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7A71899D1CA3111F0011FD58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A7189D31CA313310011FD58 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC50705982DEADFC1FB4211F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC3B6A19F56AA442346743F6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF3ACF184A137E8EDCFC589D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A71899B1CA3111F0011FD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A7189F11CA31EDF0011FD58 /* GOJRequest.m in Sources */,
+				7A7189E51CA317640011FD58 /* GOJRootNavigationController.m in Sources */,
+				7A7189EE1CA31E770011FD58 /* GOJQualificationsAPIManager.m in Sources */,
+				7A7189E21CA3145C0011FD58 /* main.m in Sources */,
+				7A7189DC1CA313580011FD58 /* GOJQualificationsViewController.m in Sources */,
+				7A7189EB1CA31E0B0011FD58 /* GOJAPIManager.m in Sources */,
+				7A7189E81CA31C480011FD58 /* Gojimo.xcdatamodeld in Sources */,
+				7A7189F41CA31F3A0011FD58 /* GOJQualificationsRequest.m in Sources */,
+				7A7189CA1CA312520011FD58 /* GOJAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7A7189B41CA3111F0011FD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7A7189B51CA3111F0011FD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A7189B71CA3111F0011FD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E0E385334E90A882E82B10D /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "Gojimo-ObjC/SupportingFiles/Gojimo-ObjC-Prefix.pch";
+				INFOPLIST_FILE = "Gojimo-ObjC/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Massana.Gojimo-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7A7189B81CA3111F0011FD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C33E5DAA0BF9774096280871 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = "Gojimo-ObjC/SupportingFiles/Gojimo-ObjC-Prefix.pch";
+				INFOPLIST_FILE = "Gojimo-ObjC/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Massana.Gojimo-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7A71899A1CA3111F0011FD58 /* Build configuration list for PBXProject "Gojimo-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A7189B41CA3111F0011FD58 /* Debug */,
+				7A7189B51CA3111F0011FD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A7189B61CA3111F0011FD58 /* Build configuration list for PBXNativeTarget "Gojimo-ObjC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A7189B71CA3111F0011FD58 /* Debug */,
+				7A7189B81CA3111F0011FD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7A7189E61CA31C480011FD58 /* Gojimo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A7189E71CA31C480011FD58 /* Gojimo.xcdatamodel */,
+			);
+			currentVersion = 7A7189E71CA31C480011FD58 /* Gojimo.xcdatamodel */;
+			path = Gojimo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 7A7189971CA3111F0011FD58 /* Project object */;
+}
