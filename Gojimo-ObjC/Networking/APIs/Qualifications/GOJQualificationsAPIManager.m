@@ -43,6 +43,8 @@
             NSLog(@"json = %@", json);
             NSLog(@"json = %@", @(json.count));
             
+            // Call parse operation
+            
             if (success)
             {
                 success(nil);

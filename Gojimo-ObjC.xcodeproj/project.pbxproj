@@ -20,6 +20,12 @@
 		7A7189F41CA31F3A0011FD58 /* GOJQualificationsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189F31CA31F3A0011FD58 /* GOJQualificationsRequest.m */; };
 		7A7189FA1CA321B70011FD58 /* GOJParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189F91CA321B70011FD58 /* GOJParser.m */; };
 		7A718A001CA323860011FD58 /* GOJQualificationsParserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189FF1CA323860011FD58 /* GOJQualificationsParserOperation.m */; };
+		7A718A031CA328080011FD58 /* GOJQualificationsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A021CA328080011FD58 /* GOJQualificationsParser.m */; };
+		7A718A061CA328160011FD58 /* GOJQualificationsFeedParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A051CA328160011FD58 /* GOJQualificationsFeedParser.m */; };
+		7A718A0F1CA33F770011FD58 /* GOJQualification+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A081CA33F770011FD58 /* GOJQualification+CoreDataProperties.m */; };
+		7A718A101CA33F770011FD58 /* GOJQualification.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A0A1CA33F770011FD58 /* GOJQualification.m */; };
+		7A718A111CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A0C1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m */; };
+		7A718A121CA33F770011FD58 /* GOJQualificationsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A0E1CA33F770011FD58 /* GOJQualificationsFeed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,18 @@
 		7A7189F91CA321B70011FD58 /* GOJParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJParser.m; sourceTree = "<group>"; };
 		7A7189FE1CA323860011FD58 /* GOJQualificationsParserOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsParserOperation.h; sourceTree = "<group>"; };
 		7A7189FF1CA323860011FD58 /* GOJQualificationsParserOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsParserOperation.m; sourceTree = "<group>"; };
+		7A718A011CA328080011FD58 /* GOJQualificationsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsParser.h; sourceTree = "<group>"; };
+		7A718A021CA328080011FD58 /* GOJQualificationsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsParser.m; sourceTree = "<group>"; };
+		7A718A041CA328160011FD58 /* GOJQualificationsFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsFeedParser.h; sourceTree = "<group>"; };
+		7A718A051CA328160011FD58 /* GOJQualificationsFeedParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsFeedParser.m; sourceTree = "<group>"; };
+		7A718A071CA33F770011FD58 /* GOJQualification+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOJQualification+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7A718A081CA33F770011FD58 /* GOJQualification+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJQualification+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7A718A091CA33F770011FD58 /* GOJQualification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualification.h; sourceTree = "<group>"; };
+		7A718A0A1CA33F770011FD58 /* GOJQualification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualification.m; sourceTree = "<group>"; };
+		7A718A0B1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOJQualificationsFeed+CoreDataProperties.h"; sourceTree = "<group>"; };
+		7A718A0C1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJQualificationsFeed+CoreDataProperties.m"; sourceTree = "<group>"; };
+		7A718A0D1CA33F770011FD58 /* GOJQualificationsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsFeed.h; sourceTree = "<group>"; };
+		7A718A0E1CA33F770011FD58 /* GOJQualificationsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsFeed.m; sourceTree = "<group>"; };
 		C33E5DAA0BF9774096280871 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D7DA40EAE42271A34225C5E7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -211,6 +229,14 @@
 		7A7189D01CA312D20011FD58 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				7A718A071CA33F770011FD58 /* GOJQualification+CoreDataProperties.h */,
+				7A718A081CA33F770011FD58 /* GOJQualification+CoreDataProperties.m */,
+				7A718A091CA33F770011FD58 /* GOJQualification.h */,
+				7A718A0A1CA33F770011FD58 /* GOJQualification.m */,
+				7A718A0B1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.h */,
+				7A718A0C1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m */,
+				7A718A0D1CA33F770011FD58 /* GOJQualificationsFeed.h */,
+				7A718A0E1CA33F770011FD58 /* GOJQualificationsFeed.m */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -341,6 +367,8 @@
 		7A7189FB1CA323060011FD58 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				7A718A041CA328160011FD58 /* GOJQualificationsFeedParser.h */,
+				7A718A051CA328160011FD58 /* GOJQualificationsFeedParser.m */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -348,6 +376,8 @@
 		7A7189FC1CA323060011FD58 /* Qualifications */ = {
 			isa = PBXGroup;
 			children = (
+				7A718A011CA328080011FD58 /* GOJQualificationsParser.h */,
+				7A718A021CA328080011FD58 /* GOJQualificationsParser.m */,
 			);
 			path = Qualifications;
 			sourceTree = "<group>";
@@ -481,11 +511,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A718A111CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m in Sources */,
+				7A718A0F1CA33F770011FD58 /* GOJQualification+CoreDataProperties.m in Sources */,
 				7A7189F11CA31EDF0011FD58 /* GOJRequest.m in Sources */,
 				7A7189E51CA317640011FD58 /* GOJRootNavigationController.m in Sources */,
+				7A718A061CA328160011FD58 /* GOJQualificationsFeedParser.m in Sources */,
 				7A718A001CA323860011FD58 /* GOJQualificationsParserOperation.m in Sources */,
+				7A718A121CA33F770011FD58 /* GOJQualificationsFeed.m in Sources */,
 				7A7189EE1CA31E770011FD58 /* GOJQualificationsAPIManager.m in Sources */,
 				7A7189E21CA3145C0011FD58 /* main.m in Sources */,
+				7A718A101CA33F770011FD58 /* GOJQualification.m in Sources */,
+				7A718A031CA328080011FD58 /* GOJQualificationsParser.m in Sources */,
 				7A7189DC1CA313580011FD58 /* GOJQualificationsViewController.m in Sources */,
 				7A7189FA1CA321B70011FD58 /* GOJParser.m in Sources */,
 				7A7189EB1CA31E0B0011FD58 /* GOJAPIManager.m in Sources */,

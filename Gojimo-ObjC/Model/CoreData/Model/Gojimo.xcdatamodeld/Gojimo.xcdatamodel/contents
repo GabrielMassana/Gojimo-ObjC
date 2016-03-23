@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
-    <entity name="GOJQualifications" syncable="YES"/>
+    <entity name="GOJQualification" representedClassName="GOJQualification" syncable="YES">
+        <attribute name="qualificationsID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="feed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GOJQualificationsFeed" inverseName="qualifications" inverseEntity="GOJQualificationsFeed" syncable="YES"/>
+    </entity>
+    <entity name="GOJQualificationsFeed" representedClassName="GOJQualificationsFeed" syncable="YES">
+        <attribute name="qualificationsFeedID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="qualifications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GOJQualification" inverseName="feed" inverseEntity="GOJQualification" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="GOJQualifications" positionX="-63" positionY="-18" width="128" height="45"/>
+        <element name="GOJQualification" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="GOJQualificationsFeed" positionX="0" positionY="0" width="128" height="75"/>
     </elements>
 </model>
