@@ -22,6 +22,9 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
 
+    
+    // with complition.
+    // Remove success and failure
     [GOJQualificationsAPIManager retrieveQualificationsWithSuccess:^(id result)
     {
         

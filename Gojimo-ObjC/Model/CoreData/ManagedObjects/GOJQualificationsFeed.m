@@ -14,7 +14,7 @@ static NSString *const kGOJQualificationsFeedID = @"-1";
 
 + (instancetype)fetchQualificationsFeedQithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext feedID:(NSString *)feedID
 {
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"feedID MATCHES %@", feedID];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qualificationsFeedID MATCHES %@", feedID];
     
     GOJQualificationsFeed *feed = [CDFRetrievalService retrieveFirstEntryForEntityClass:[GOJQualificationsFeed self]
                                                                               predicate:predicate

@@ -11,6 +11,7 @@
 #import <CoreNetworking/CoreNetworking.h>
 
 #import "GOJQualificationsRequest.h"
+#import "GOJQualificationsParserOperation.h"
 
 @implementation GOJQualificationsAPIManager
 
@@ -44,11 +45,18 @@
             NSLog(@"json = %@", @(json.count));
             
             // Call parse operation
+            GOJQualificationsParserOperation *operation = [[GOJQualificationsParserOperation alloc] initWithQualifications:json];
+            operation.operationQueueIdentifier = GOJLocalDataOperationQueueTypeIdentifier;
             
-            if (success)
+            operation.onSuccess = ^(id result)
             {
-                success(nil);
-            }
+                if (success)
+                {
+                    success(result);
+                }
+            };
+            
+            [[COMOperationQueueManager sharedInstance] addOperation:operation];
         }
     };
     

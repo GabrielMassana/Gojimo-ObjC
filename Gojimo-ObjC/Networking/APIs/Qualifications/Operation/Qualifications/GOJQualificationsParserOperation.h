@@ -10,4 +10,6 @@
 
 @interface GOJQualificationsParserOperation : COMOperation
 
+- (instancetype)initWithQualifications:(NSArray *)qualificationsResponse;
+
 @end

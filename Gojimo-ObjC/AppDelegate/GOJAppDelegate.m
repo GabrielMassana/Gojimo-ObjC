@@ -9,6 +9,7 @@
 #import "GOJAppDelegate.h"
 
 #import <CoreDataFullStack/CoreDataFullStack.h>
+#import <CoreOperation/CoreOperation.h>
 
 #import "GOJRootNavigationController.h"
 
@@ -26,6 +27,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [CDFCoreDataManager sharedInstance].delegate = self;
+    
+    /*-------------------*/
+
+    [self registerOperationQueues];
     
     /*-------------------*/
 
@@ -80,6 +85,36 @@
     }
     
     return _rootNavigationController;
+}
+
+#pragma mark - OperationQueues
+
+- (void)registerOperationQueues
+{
+    //Network UI
+    
+    //Network Background
+    NSOperationQueue *networkDataOperationQueue = [[NSOperationQueue alloc] init];
+    networkDataOperationQueue.qualityOfService = NSQualityOfServiceBackground;
+    networkDataOperationQueue.maxConcurrentOperationCount = 1;
+    networkDataOperationQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
+    
+    [[COMOperationQueueManager sharedInstance] registerOperationQueue:networkDataOperationQueue
+                                             operationQueueIdentifier:GOJNetworkDataOperationQueueTypeIdentifier];
+    
+    
+    //Local Data
+    NSOperationQueue *localDataOperationQueue = [[NSOperationQueue alloc] init];
+    localDataOperationQueue.qualityOfService = NSQualityOfServiceBackground;
+    localDataOperationQueue.maxConcurrentOperationCount = 1;
+    localDataOperationQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
+    
+    [[COMOperationQueueManager sharedInstance] registerOperationQueue:localDataOperationQueue
+                                             operationQueueIdentifier:GOJLocalDataOperationQueueTypeIdentifier];
+    
+    //Media Download
+    
+    //Core Data Update
 }
 
 #pragma mark - CDFCoreDataManagerDelegate
