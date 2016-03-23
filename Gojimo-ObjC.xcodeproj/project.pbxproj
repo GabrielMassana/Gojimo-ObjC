@@ -18,6 +18,8 @@
 		7A7189EE1CA31E770011FD58 /* GOJQualificationsAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189ED1CA31E770011FD58 /* GOJQualificationsAPIManager.m */; };
 		7A7189F11CA31EDF0011FD58 /* GOJRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189F01CA31EDF0011FD58 /* GOJRequest.m */; };
 		7A7189F41CA31F3A0011FD58 /* GOJQualificationsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189F31CA31F3A0011FD58 /* GOJQualificationsRequest.m */; };
+		7A7189FA1CA321B70011FD58 /* GOJParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189F91CA321B70011FD58 /* GOJParser.m */; };
+		7A718A001CA323860011FD58 /* GOJQualificationsParserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7189FF1CA323860011FD58 /* GOJQualificationsParserOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		7A7189F01CA31EDF0011FD58 /* GOJRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJRequest.m; sourceTree = "<group>"; };
 		7A7189F21CA31F3A0011FD58 /* GOJQualificationsRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsRequest.h; sourceTree = "<group>"; };
 		7A7189F31CA31F3A0011FD58 /* GOJQualificationsRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsRequest.m; sourceTree = "<group>"; };
+		7A7189F81CA321B70011FD58 /* GOJParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJParser.h; sourceTree = "<group>"; };
+		7A7189F91CA321B70011FD58 /* GOJParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJParser.m; sourceTree = "<group>"; };
+		7A7189FE1CA323860011FD58 /* GOJQualificationsParserOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsParserOperation.h; sourceTree = "<group>"; };
+		7A7189FF1CA323860011FD58 /* GOJQualificationsParserOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsParserOperation.m; sourceTree = "<group>"; };
 		C33E5DAA0BF9774096280871 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D7DA40EAE42271A34225C5E7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -231,6 +237,7 @@
 			children = (
 				7A7189E91CA31E0B0011FD58 /* GOJAPIManager.h */,
 				7A7189EA1CA31E0B0011FD58 /* GOJAPIManager.m */,
+				7A7189F51CA3218A0011FD58 /* Parser */,
 			);
 			path = Abstract;
 			sourceTree = "<group>";
@@ -240,6 +247,8 @@
 			children = (
 				7A7189EC1CA31E770011FD58 /* GOJQualificationsAPIManager.h */,
 				7A7189ED1CA31E770011FD58 /* GOJQualificationsAPIManager.m */,
+				7A7189F61CA3219F0011FD58 /* Operation */,
+				7A7189F71CA3219F0011FD58 /* Parser */,
 			);
 			path = Qualifications;
 			sourceTree = "<group>";
@@ -299,6 +308,55 @@
 			children = (
 				7A7189F21CA31F3A0011FD58 /* GOJQualificationsRequest.h */,
 				7A7189F31CA31F3A0011FD58 /* GOJQualificationsRequest.m */,
+			);
+			path = Qualifications;
+			sourceTree = "<group>";
+		};
+		7A7189F51CA3218A0011FD58 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189F81CA321B70011FD58 /* GOJParser.h */,
+				7A7189F91CA321B70011FD58 /* GOJParser.m */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		7A7189F61CA3219F0011FD58 /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189FD1CA3236D0011FD58 /* Qualifications */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
+		7A7189F71CA3219F0011FD58 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189FB1CA323060011FD58 /* Feed */,
+				7A7189FC1CA323060011FD58 /* Qualifications */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		7A7189FB1CA323060011FD58 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		7A7189FC1CA323060011FD58 /* Qualifications */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Qualifications;
+			sourceTree = "<group>";
+		};
+		7A7189FD1CA3236D0011FD58 /* Qualifications */ = {
+			isa = PBXGroup;
+			children = (
+				7A7189FE1CA323860011FD58 /* GOJQualificationsParserOperation.h */,
+				7A7189FF1CA323860011FD58 /* GOJQualificationsParserOperation.m */,
 			);
 			path = Qualifications;
 			sourceTree = "<group>";
@@ -425,9 +483,11 @@
 			files = (
 				7A7189F11CA31EDF0011FD58 /* GOJRequest.m in Sources */,
 				7A7189E51CA317640011FD58 /* GOJRootNavigationController.m in Sources */,
+				7A718A001CA323860011FD58 /* GOJQualificationsParserOperation.m in Sources */,
 				7A7189EE1CA31E770011FD58 /* GOJQualificationsAPIManager.m in Sources */,
 				7A7189E21CA3145C0011FD58 /* main.m in Sources */,
 				7A7189DC1CA313580011FD58 /* GOJQualificationsViewController.m in Sources */,
+				7A7189FA1CA321B70011FD58 /* GOJParser.m in Sources */,
 				7A7189EB1CA31E0B0011FD58 /* GOJAPIManager.m in Sources */,
 				7A7189E81CA31C480011FD58 /* Gojimo.xcdatamodeld in Sources */,
 				7A7189F41CA31F3A0011FD58 /* GOJQualificationsRequest.m in Sources */,
