@@ -30,6 +30,10 @@
 		7A718A181CA492D00011FD58 /* TradeGothicLT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A718A151CA492D00011FD58 /* TradeGothicLT.ttf */; };
 		7A718A191CA492D00011FD58 /* TradeGothicNo.2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A718A161CA492D00011FD58 /* TradeGothicNo.2-Bold.ttf */; };
 		7A718A201CA493390011FD58 /* UIFont+GOJFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A1F1CA493390011FD58 /* UIFont+GOJFont.m */; };
+		7A718A271CA4968C0011FD58 /* GOJQualificationsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A261CA4968C0011FD58 /* GOJQualificationsAdapter.m */; };
+		7A718A2A1CA49A220011FD58 /* GOJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A291CA49A220011FD58 /* GOJTableViewCell.m */; };
+		7A718A2D1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A2C1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m */; };
+		7A718A311CA49BB60011FD58 /* GOJDeviceSizeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A301CA49BB60011FD58 /* GOJDeviceSizeService.m */; };
 		C0039ABB1CA408F700437BBC /* GOJCountry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */; };
 		C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABA1CA408F700437BBC /* GOJCountry.m */; };
 		C0039AC11CA4090800437BBC /* GOJSubject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABE1CA4090800437BBC /* GOJSubject+CoreDataProperties.m */; };
@@ -83,6 +87,14 @@
 		7A718A161CA492D00011FD58 /* TradeGothicNo.2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TradeGothicNo.2-Bold.ttf"; sourceTree = "<group>"; };
 		7A718A1E1CA493390011FD58 /* UIFont+GOJFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GOJFont.h"; sourceTree = "<group>"; };
 		7A718A1F1CA493390011FD58 /* UIFont+GOJFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GOJFont.m"; sourceTree = "<group>"; };
+		7A718A251CA4968C0011FD58 /* GOJQualificationsAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsAdapter.h; sourceTree = "<group>"; };
+		7A718A261CA4968C0011FD58 /* GOJQualificationsAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsAdapter.m; sourceTree = "<group>"; };
+		7A718A281CA49A220011FD58 /* GOJTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJTableViewCell.h; sourceTree = "<group>"; };
+		7A718A291CA49A220011FD58 /* GOJTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJTableViewCell.m; sourceTree = "<group>"; };
+		7A718A2B1CA49AC70011FD58 /* GOJQualificationsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsTableViewCell.h; sourceTree = "<group>"; };
+		7A718A2C1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsTableViewCell.m; sourceTree = "<group>"; };
+		7A718A2F1CA49BB60011FD58 /* GOJDeviceSizeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJDeviceSizeService.h; sourceTree = "<group>"; };
+		7A718A301CA49BB60011FD58 /* GOJDeviceSizeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJDeviceSizeService.m; sourceTree = "<group>"; };
 		C0039AB71CA408F700437BBC /* GOJCountry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOJCountry+CoreDataProperties.h"; sourceTree = "<group>"; };
 		C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJCountry+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C0039AB91CA408F700437BBC /* GOJCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJCountry.h; sourceTree = "<group>"; };
@@ -213,6 +225,7 @@
 		7A7189C21CA312520011FD58 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				7A718A2E1CA49B850011FD58 /* DeviceSizeService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -340,6 +353,8 @@
 			children = (
 				7A7189DA1CA313580011FD58 /* GOJQualificationsViewController.h */,
 				7A7189DB1CA313580011FD58 /* GOJQualificationsViewController.m */,
+				7A718A221CA496740011FD58 /* Adapter */,
+				7A718A231CA496740011FD58 /* Views */,
 			);
 			path = Qualifications;
 			sourceTree = "<group>";
@@ -363,6 +378,8 @@
 		7A7189DF1CA3138B0011FD58 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				7A718A281CA49A220011FD58 /* GOJTableViewCell.h */,
+				7A718A291CA49A220011FD58 /* GOJTableViewCell.m */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -446,6 +463,42 @@
 				7A718A1F1CA493390011FD58 /* UIFont+GOJFont.m */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		7A718A221CA496740011FD58 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A251CA4968C0011FD58 /* GOJQualificationsAdapter.h */,
+				7A718A261CA4968C0011FD58 /* GOJQualificationsAdapter.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		7A718A231CA496740011FD58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A241CA496740011FD58 /* TableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A718A241CA496740011FD58 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A2B1CA49AC70011FD58 /* GOJQualificationsTableViewCell.h */,
+				7A718A2C1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		7A718A2E1CA49B850011FD58 /* DeviceSizeService */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A2F1CA49BB60011FD58 /* GOJDeviceSizeService.h */,
+				7A718A301CA49BB60011FD58 /* GOJDeviceSizeService.m */,
+			);
+			name = DeviceSizeService;
+			path = "untitled folder/DeviceSizeService";
 			sourceTree = "<group>";
 		};
 		C0039AC31CA42CAC00437BBC /* Country */ = {
@@ -641,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A718A111CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m in Sources */,
+				7A718A311CA49BB60011FD58 /* GOJDeviceSizeService.m in Sources */,
 				7A718A0F1CA33F770011FD58 /* GOJQualification+CoreDataProperties.m in Sources */,
 				C0039AD61CA45B7000437BBC /* GOJSubjectParser.m in Sources */,
 				7A7189F11CA31EDF0011FD58 /* GOJRequest.m in Sources */,
@@ -656,15 +710,18 @@
 				7A7189E21CA3145C0011FD58 /* main.m in Sources */,
 				7A718A101CA33F770011FD58 /* GOJQualification.m in Sources */,
 				7A718A031CA328080011FD58 /* GOJQualificationsParser.m in Sources */,
+				7A718A2A1CA49A220011FD58 /* GOJTableViewCell.m in Sources */,
 				C0039ACC1CA4383F00437BBC /* NSDateFormatter+GOJServerResponse.m in Sources */,
 				7A7189DC1CA313580011FD58 /* GOJQualificationsViewController.m in Sources */,
 				7A7189FA1CA321B70011FD58 /* GOJParser.m in Sources */,
 				7A7189EB1CA31E0B0011FD58 /* GOJAPIManager.m in Sources */,
+				7A718A271CA4968C0011FD58 /* GOJQualificationsAdapter.m in Sources */,
 				7A7189E81CA31C480011FD58 /* Gojimo.xcdatamodeld in Sources */,
 				7A7189F41CA31F3A0011FD58 /* GOJQualificationsRequest.m in Sources */,
 				7A718A201CA493390011FD58 /* UIFont+GOJFont.m in Sources */,
 				C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */,
 				C0039AC71CA42D0F00437BBC /* GOJCountryParser.m in Sources */,
+				7A718A2D1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m in Sources */,
 				7A7189CA1CA312520011FD58 /* GOJAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,12 +9,19 @@
 #import "GOJQualificationsViewController.h"
 
 #import "GOJQualificationsAPIManager.h"
+#import "GOJQualificationsAdapter.h"
 
-@interface GOJQualificationsViewController ()
+@interface GOJQualificationsViewController () <GOJQualificationsAdapterDelegate>
+
+@property (nonatomic, strong) UITableView *tableView;
+
+@property (nonatomic, strong) GOJQualificationsAdapter *adapter;
 
 @end
 
 @implementation GOJQualificationsViewController
+
+#pragma mark - ViewLifecycle
 
 - (void)viewDidLoad
 {
@@ -22,6 +29,20 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
 
+    /*-------------------*/
+
+    [self.view addSubview:self.tableView];
+    
+    self.adapter.tableView = self.tableView;
+    
+    [self updateViewConstraints];
+    
+    
+    
+    
+    
+    
+    
     
     // with complition.
     // Remove success and failure
@@ -34,5 +55,32 @@
         
     }];
 }
+
+#pragma mark - Subviews
+
+- (UITableView *)tableView
+{
+    if (!_tableView)
+    {
+        _tableView = [UITableView newAutoLayoutView];
+        
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    }
+    
+    return _tableView;
+}
+
+#pragma mark - Constraints
+
+- (void)updateViewConstraints
+{
+    [super updateViewConstraints];
+    
+    /*----------------*/
+    
+    [self.tableView autoPinEdgesToSuperviewEdges];
+}
+
+#pragma mark - GOJQualificationsAdapterDelegate
 
 @end
