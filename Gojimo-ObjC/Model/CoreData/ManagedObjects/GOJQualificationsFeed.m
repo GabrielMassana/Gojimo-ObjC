@@ -12,7 +12,7 @@ static NSString *const kGOJQualificationsFeedID = @"-1";
 
 @implementation GOJQualificationsFeed
 
-+ (instancetype)fetchQualificationsFeedQithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext feedID:(NSString *)feedID
++ (instancetype)fetchQualificationsFeedWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext feedID:(NSString *)feedID
 {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qualificationsFeedID MATCHES %@", feedID];
     
@@ -20,21 +20,22 @@ static NSString *const kGOJQualificationsFeedID = @"-1";
                                                                               predicate:predicate
                                                                    managedObjectContext:managedObjectContext];
     
-    [managedObjectContext save:nil];
-    
     return feed;
 }
 
 + (instancetype)fetchQualificationsFeedWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
 {
-    GOJQualificationsFeed *feed = [GOJQualificationsFeed fetchQualificationsFeedQithManagedObjectContext:managedObjectContext
+    GOJQualificationsFeed *feed = [GOJQualificationsFeed fetchQualificationsFeedWithManagedObjectContext:managedObjectContext
                                                                                                   feedID:kGOJQualificationsFeedID];
     
     if (!feed)
     {
-        feed = [CDFInsertService insertNewObjectForEntityClass:[GOJQualificationsFeed self] inManagedObjectContext:managedObjectContext];
+        feed = [CDFInsertService insertNewObjectForEntityClass:[GOJQualificationsFeed self]
+                                        inManagedObjectContext:managedObjectContext];
         
         feed.qualificationsFeedID = kGOJQualificationsFeedID;
+        
+        [managedObjectContext save:nil];
     }
     
     return feed;

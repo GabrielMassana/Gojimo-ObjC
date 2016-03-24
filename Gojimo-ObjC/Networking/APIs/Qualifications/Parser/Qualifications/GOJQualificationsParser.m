@@ -26,10 +26,44 @@
 
 - (GOJQualification *)parseQualification:(NSDictionary *)qualificationResponse
 {
-    NSLog(@"qualification: %@", qualificationResponse);
+    // protection for nil
+
+    NSString *qualificationID = qualificationResponse[@"id"];
     
-    //Crash
-    return nil;
+//    if (!qualificationID || <null>) {
+//        
+//    }
+    
+    GOJQualification *qualification = [GOJQualification fetchQualificationWithManagedObjectContext:self.parserManagedObjectContext
+                                                                                   qualificationID:qualificationID];
+    
+    if (!qualification)
+    {
+        qualification = [CDFInsertService insertNewObjectForEntityClass:[GOJQualification self]
+                                                 inManagedObjectContext:self.parserManagedObjectContext];
+        
+        qualification.qualificationID = qualificationID;
+    }
+    
+    NSDictionary *contry = qualificationResponse[@"country"];
+    // parse country
+    
+//    qualification.country = []
+
+    // protection for nil
+    qualification.link = qualificationResponse[@"country"];
+    qualification.name = qualificationResponse[@"name"];
+    
+    NSArray *subjects = qualificationResponse[@"subjects"];
+
+    // parse subjects
+    
+    /*
+     for each subject set qualification
+     */
+    
+    // protection for nil
+    return qualification;
 }
 
 @end

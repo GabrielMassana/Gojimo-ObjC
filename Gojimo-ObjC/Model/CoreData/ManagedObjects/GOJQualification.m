@@ -10,6 +10,17 @@
 
 @implementation GOJQualification
 
-// Insert code here to add functionality to your managed object subclass
++ (instancetype)fetchQualificationWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                           qualificationID:(NSString *)qualificationID
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"qualificationID MATCHES %@", qualificationID];
+    
+    GOJQualification *qualification = [CDFRetrievalService retrieveFirstEntryForEntityClass:[GOJQualification self]
+                                                                                  predicate:predicate
+                                                                       managedObjectContext:managedObjectContext];
+    
+    return qualification;
+
+}
 
 @end
