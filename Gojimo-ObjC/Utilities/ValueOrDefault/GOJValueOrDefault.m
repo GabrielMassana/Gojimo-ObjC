@@ -18,10 +18,6 @@
     {
         returnValue = nil;
     }
-//    else if ([value isEqualToString:@"nil"])
-//    {
-//        returnValue = nil;
-//    }
     else if (value == nil)
     {
         returnValue = defaultValue;
@@ -35,9 +31,7 @@
     id returnValue = value;
 
     if (value == [NSNull null] ||
-        value == nil //||
-//        [value isEqualToString:@"nil"]
-        )
+        value == nil)
     {
         returnValue = nil;
     }
