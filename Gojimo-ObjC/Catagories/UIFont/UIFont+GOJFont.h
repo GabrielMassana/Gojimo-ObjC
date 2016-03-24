@@ -10,8 +10,8 @@
 
 @interface UIFont (GOJFont)
 
-- (UIFont *)goj_tradeGothicLightWithSize:(CGFloat)size;
-- (UIFont *)goj_tradeGothicLTWithSize:(CGFloat)size;
-- (UIFont *)goj_tradeGothicNo2BoldWithSize:(CGFloat)size;
++ (UIFont *)goj_tradeGothicLightWithSize:(CGFloat)size;
++ (UIFont *)goj_tradeGothicLTWithSize:(CGFloat)size;
++ (UIFont *)goj_tradeGothicNo2BoldWithSize:(CGFloat)size;
 
 @end

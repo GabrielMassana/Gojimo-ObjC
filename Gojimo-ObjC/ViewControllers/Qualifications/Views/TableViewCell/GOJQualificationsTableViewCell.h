@@ -8,6 +8,10 @@
 
 #import "GOJTableViewCell.h"
 
+@class GOJQualification;
+
 @interface GOJQualificationsTableViewCell : GOJTableViewCell
+
+- (void)configureWithQualification:(GOJQualification *)qualification;
 
 @end

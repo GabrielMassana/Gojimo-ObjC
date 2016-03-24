@@ -95,6 +95,14 @@
            forCellReuseIdentifier:[GOJQualificationsTableViewCell reuseIdentifier]];
 }
 
+#pragma mark - ConfigureCell
+
+- (void)configureCell:(GOJQualificationsTableViewCell *)cell indexPath:(NSIndexPath *)indexPath
+{
+    GOJQualification *qualification = self.fetchedResultsController.fetchedObjects[indexPath.row];
+    
+    [cell configureWithQualification:qualification];
+}
 
 #pragma mark - UITableViewDataSource
 
@@ -115,9 +123,10 @@
         cell.backgroundColor = [UIColor redColor];
     }
     
+    [self configureCell:cell
+              indexPath:indexPath];
+    
     return cell;
 }
-
-#pragma mark - UITableViewDelegate
 
 @end

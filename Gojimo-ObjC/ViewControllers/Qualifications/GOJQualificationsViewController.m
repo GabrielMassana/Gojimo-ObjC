@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) GOJQualificationsAdapter *adapter;
 
+@property (nonatomic, strong) UILabel *titleViewLabel;
+
 @end
 
 @implementation GOJQualificationsViewController
@@ -30,6 +32,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
 
     /*-------------------*/
+
+    self.navigationItem.titleView = self.titleViewLabel;
 
     [self.view addSubview:self.tableView];
     
@@ -78,6 +82,25 @@
     }
     
     return _adapter;
+}
+
+- (UILabel *)titleViewLabel
+{
+    if (!_titleViewLabel)
+    {
+        _titleViewLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f,
+                                                                    0.0f,
+                                                                    200.0f,
+                                                                    25.0f)];
+        
+        _titleViewLabel.text = NSLocalizedString(@"Qualifications", nil);
+        _titleViewLabel.textAlignment = NSTextAlignmentCenter;
+        _titleViewLabel.font = [UIFont goj_tradeGothicNo2BoldWithSize:20.0f];
+        _titleViewLabel.adjustsFontSizeToFitWidth = true;
+        _titleViewLabel.minimumScaleFactor = 0.5;
+    }
+    
+    return _titleViewLabel;
 }
 
 #pragma mark - Constraints
