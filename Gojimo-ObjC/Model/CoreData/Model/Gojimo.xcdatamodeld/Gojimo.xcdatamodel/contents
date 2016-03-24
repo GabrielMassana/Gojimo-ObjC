@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
-    <entity name="GOJCountry" representedClassName=".GOJCountry" syncable="YES">
+    <entity name="GOJCountry" representedClassName="GOJCountry" syncable="YES">
         <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
@@ -20,7 +20,7 @@
         <attribute name="qualificationsFeedID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="qualifications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GOJQualification" inverseName="feed" inverseEntity="GOJQualification" syncable="YES"/>
     </entity>
-    <entity name="GOJSubject" representedClassName=".GOJSubject" syncable="YES">
+    <entity name="GOJSubject" representedClassName="GOJSubject" syncable="YES">
         <attribute name="colour" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="subjectID" optional="YES" attributeType="String" syncable="YES"/>
@@ -28,9 +28,9 @@
         <relationship name="qualification" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GOJQualification" inverseName="subjects" inverseEntity="GOJQualification" syncable="YES"/>
     </entity>
     <elements>
+        <element name="GOJCountry" positionX="9" positionY="27" width="128" height="135"/>
         <element name="GOJQualification" positionX="0" positionY="0" width="128" height="135"/>
         <element name="GOJQualificationsFeed" positionX="0" positionY="0" width="128" height="75"/>
-        <element name="GOJCountry" positionX="9" positionY="27" width="128" height="135"/>
         <element name="GOJSubject" positionX="18" positionY="72" width="128" height="120"/>
     </elements>
 </model>

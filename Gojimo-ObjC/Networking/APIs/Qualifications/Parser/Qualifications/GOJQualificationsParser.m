@@ -10,6 +10,8 @@
 
 #import "GOJQualification.h"
 #import "GOJCountryParser.h"
+#import "GOJSubjectParser.h"
+#import "GOJSubject.h"
 
 @implementation GOJQualificationsParser
 
@@ -19,7 +21,12 @@
     
     for (NSDictionary *qualification in qualificationsResponse)
     {
-        [array addObject:[self parseQualification:qualification]];
+        GOJQualification *aQualification = [self parseQualification:qualification];
+        
+        if (aQualification)
+        {
+            [array addObject:aQualification];
+        }
     }
     
     return array;
@@ -27,47 +34,60 @@
 
 - (GOJQualification *)parseQualification:(NSDictionary *)qualificationResponse
 {
-    // TODO:  protection for nil
-
     NSString *qualificationID = qualificationResponse[@"id"];
     
-//   TODO:   if (!qualificationID || <null>) {
-//     https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/NumbersandValues/Articles/Null.html   
-//    }
+    NSLog(@"%@", qualificationID);
     
-    GOJQualification *qualification = [GOJQualification fetchQualificationWithManagedObjectContext:self.parserManagedObjectContext
-                                                                                   qualificationID:qualificationID];
+    GOJQualification *qualification = nil;
     
-    if (!qualification)
+    if ([GOJValueOrDefault valueIsNotNil:qualificationID])
     {
-        qualification = [CDFInsertService insertNewObjectForEntityClass:[GOJQualification self]
-                                                 inManagedObjectContext:self.parserManagedObjectContext];
+        qualification = [GOJQualification fetchQualificationWithManagedObjectContext:self.parserManagedObjectContext
+                                                                     qualificationID:qualificationID];
         
-        qualification.qualificationID = qualificationID;
+        if (!qualification)
+        {
+            qualification = [CDFInsertService insertNewObjectForEntityClass:[GOJQualification self]
+                                                     inManagedObjectContext:self.parserManagedObjectContext];
+            
+            qualification.qualificationID = qualificationID;
+        }
+        
+        /*-------------------*/
+        
+        NSDictionary *country = qualificationResponse[@"country"];
+        
+        if ([GOJValueOrDefault valueIsNotNil:country])
+        {
+            GOJCountryParser *countryParser = [GOJCountryParser parserWithManagedObjectContext:self.parserManagedObjectContext];
+            
+            qualification.country = [countryParser parseCountry:country];
+        }
+        
+        /*-------------------*/
+        
+        // protection for nil
+        qualification.link = [GOJValueOrDefault value:qualificationResponse[@"link"]
+                                            orDefault:qualification.link];
+        
+        qualification.name = [GOJValueOrDefault value:qualificationResponse[@"name"]
+                                            orDefault:qualification.link];
+        
+        NSArray *subjectsArray = qualificationResponse[@"subjects"];
+        
+        if ([GOJValueOrDefault valueIsNotNil:subjectsArray])
+        {
+            GOJSubjectParser *subjectParser = [GOJSubjectParser parserWithManagedObjectContext:self.parserManagedObjectContext];
+            
+            NSArray *subjects = [subjectParser parseSubjects:subjectsArray];
+            
+            for (GOJSubject *subject in subjects)
+            {
+                subject.qualification = qualification;
+            }
+        }
     }
-    /*-------------------*/
 
-    NSDictionary *country = qualificationResponse[@"country"];
-    
-    GOJCountryParser *countryParser = [GOJCountryParser parserWithManagedObjectContext:self.parserManagedObjectContext];
-    
-    qualification.country = [countryParser parseCountry:country];
-    
-    /*-------------------*/
-
-    // protection for nil
-    qualification.link = qualificationResponse[@"country"];
-    qualification.name = qualificationResponse[@"name"];
-    
-    NSArray *subjects = qualificationResponse[@"subjects"];
-
-    // TODO:  parse subjects
-    
-    /*
-      TODO: for each subject set qualification
-     */
-    
-    // protection for nil
     return qualification;
 }
 

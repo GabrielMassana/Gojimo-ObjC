@@ -32,6 +32,8 @@
 		C0039AC21CA4090800437BBC /* GOJSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AC01CA4090800437BBC /* GOJSubject.m */; };
 		C0039AC71CA42D0F00437BBC /* GOJCountryParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AC61CA42D0F00437BBC /* GOJCountryParser.m */; };
 		C0039ACC1CA4383F00437BBC /* NSDateFormatter+GOJServerResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ACB1CA4383F00437BBC /* NSDateFormatter+GOJServerResponse.m */; };
+		C0039AD11CA450E300437BBC /* GOJValueOrDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AD01CA450E300437BBC /* GOJValueOrDefault.m */; };
+		C0039AD61CA45B7000437BBC /* GOJSubjectParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AD51CA45B7000437BBC /* GOJSubjectParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +86,10 @@
 		C0039AC61CA42D0F00437BBC /* GOJCountryParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJCountryParser.m; sourceTree = "<group>"; };
 		C0039ACA1CA4383F00437BBC /* NSDateFormatter+GOJServerResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+GOJServerResponse.h"; sourceTree = "<group>"; };
 		C0039ACB1CA4383F00437BBC /* NSDateFormatter+GOJServerResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+GOJServerResponse.m"; sourceTree = "<group>"; };
+		C0039ACF1CA450E300437BBC /* GOJValueOrDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJValueOrDefault.h; sourceTree = "<group>"; };
+		C0039AD01CA450E300437BBC /* GOJValueOrDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJValueOrDefault.m; sourceTree = "<group>"; };
+		C0039AD41CA45B7000437BBC /* GOJSubjectParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJSubjectParser.h; sourceTree = "<group>"; };
+		C0039AD51CA45B7000437BBC /* GOJSubjectParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJSubjectParser.m; sourceTree = "<group>"; };
 		C33E5DAA0BF9774096280871 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D7DA40EAE42271A34225C5E7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -145,6 +151,7 @@
 				7A7189BF1CA312520011FD58 /* Resources */,
 				7A7189C21CA312520011FD58 /* Services */,
 				7A7189C31CA312520011FD58 /* SupportingFiles */,
+				C0039ACD1CA4507C00437BBC /* Utilities */,
 				7A7189C61CA312520011FD58 /* ViewControllers */,
 				7A7189C91CA312520011FD58 /* Views */,
 			);
@@ -274,6 +281,7 @@
 				7A7189D51CA3133A0011FD58 /* Abstract */,
 				C0039AC31CA42CAC00437BBC /* Country */,
 				7A7189D61CA3133A0011FD58 /* Qualifications */,
+				C0039AD21CA45B0F00437BBC /* Subject */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -445,6 +453,40 @@
 			path = NSDateFormatter;
 			sourceTree = "<group>";
 		};
+		C0039ACD1CA4507C00437BBC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C0039ACE1CA4509800437BBC /* ValueOrDefault */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C0039ACE1CA4509800437BBC /* ValueOrDefault */ = {
+			isa = PBXGroup;
+			children = (
+				C0039ACF1CA450E300437BBC /* GOJValueOrDefault.h */,
+				C0039AD01CA450E300437BBC /* GOJValueOrDefault.m */,
+			);
+			path = ValueOrDefault;
+			sourceTree = "<group>";
+		};
+		C0039AD21CA45B0F00437BBC /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				C0039AD31CA45B3000437BBC /* Parser */,
+			);
+			path = Subject;
+			sourceTree = "<group>";
+		};
+		C0039AD31CA45B3000437BBC /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				C0039AD41CA45B7000437BBC /* GOJSubjectParser.h */,
+				C0039AD51CA45B7000437BBC /* GOJSubjectParser.m */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -567,6 +609,7 @@
 			files = (
 				7A718A111CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m in Sources */,
 				7A718A0F1CA33F770011FD58 /* GOJQualification+CoreDataProperties.m in Sources */,
+				C0039AD61CA45B7000437BBC /* GOJSubjectParser.m in Sources */,
 				7A7189F11CA31EDF0011FD58 /* GOJRequest.m in Sources */,
 				7A7189E51CA317640011FD58 /* GOJRootNavigationController.m in Sources */,
 				C0039AC21CA4090800437BBC /* GOJSubject.m in Sources */,
@@ -574,6 +617,7 @@
 				C0039ABB1CA408F700437BBC /* GOJCountry+CoreDataProperties.m in Sources */,
 				7A718A001CA323860011FD58 /* GOJQualificationsParserOperation.m in Sources */,
 				7A718A121CA33F770011FD58 /* GOJQualificationsFeed.m in Sources */,
+				C0039AD11CA450E300437BBC /* GOJValueOrDefault.m in Sources */,
 				7A7189EE1CA31E770011FD58 /* GOJQualificationsAPIManager.m in Sources */,
 				C0039AC11CA4090800437BBC /* GOJSubject+CoreDataProperties.m in Sources */,
 				7A7189E21CA3145C0011FD58 /* main.m in Sources */,
