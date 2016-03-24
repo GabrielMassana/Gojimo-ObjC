@@ -20,7 +20,6 @@
                                                                        managedObjectContext:managedObjectContext];
     
     return qualification;
-
 }
 
 @end

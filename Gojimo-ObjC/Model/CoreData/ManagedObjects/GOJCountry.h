@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GOJCountry : NSManagedObject
 
-// Insert code here to declare functionality of your managed object subclass
++ (instancetype)fetchCountryWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                         countryCode:(NSString *)countryCode;
 
 @end
 

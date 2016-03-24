@@ -11,6 +11,16 @@
 
 @implementation GOJCountry
 
-// Insert code here to add functionality to your managed object subclass
++ (instancetype)fetchCountryWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                         countryCode:(NSString *)countryCode
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"code MATCHES %@", countryCode];
+    
+    GOJCountry *country = [CDFRetrievalService retrieveFirstEntryForEntityClass:[GOJCountry self]
+                                                                                  predicate:predicate
+                                                                       managedObjectContext:managedObjectContext];
+    
+    return country;
+}
 
 @end

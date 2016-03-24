@@ -19,12 +19,10 @@ static NSString *const GOJLocalDataOperationQueueTypeIdentifier = @"GOJLocalData
 
 #ifdef __OBJC__
 
-
-
-
     #import <PureLayout/PureLayout.h>
     #import <CoreDataFullStack/CoreDataFullStack.h>
 
+    #import "NSDateFormatter+GOJServerResponse.h"
 
 #endif
 

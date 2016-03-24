@@ -9,6 +9,7 @@
 #import "GOJQualificationsParser.h"
 
 #import "GOJQualification.h"
+#import "GOJCountryParser.h"
 
 @implementation GOJQualificationsParser
 
@@ -26,11 +27,11 @@
 
 - (GOJQualification *)parseQualification:(NSDictionary *)qualificationResponse
 {
-    // protection for nil
+    // TODO:  protection for nil
 
     NSString *qualificationID = qualificationResponse[@"id"];
     
-//    if (!qualificationID || <null>) {
+//   TODO:   if (!qualificationID || <null>) {
 //        
 //    }
     
@@ -44,11 +45,15 @@
         
         qualification.qualificationID = qualificationID;
     }
+    /*-------------------*/
+
+    NSDictionary *country = qualificationResponse[@"country"];
     
-    NSDictionary *contry = qualificationResponse[@"country"];
-    // parse country
+    GOJCountryParser *countryParser = [GOJCountryParser parserWithManagedObjectContext:self.parserManagedObjectContext];
     
-//    qualification.country = []
+    qualification.country = [countryParser parseCountry:country];
+    
+    /*-------------------*/
 
     // protection for nil
     qualification.link = qualificationResponse[@"country"];
@@ -56,10 +61,10 @@
     
     NSArray *subjects = qualificationResponse[@"subjects"];
 
-    // parse subjects
+    // TODO:  parse subjects
     
     /*
-     for each subject set qualification
+      TODO: for each subject set qualification
      */
     
     // protection for nil
