@@ -21,8 +21,13 @@ static NSString *const GOJLocalDataOperationQueueTypeIdentifier = @"GOJLocalData
 
     #import <PureLayout/PureLayout.h>
     #import <CoreDataFullStack/CoreDataFullStack.h>
+    #import <CoreOperation/CoreOperation.h>
+    #import <CoreNetworking/CoreNetworking.h>
+
+    #import "ColorWithHex-Swift.h"
 
     #import "NSDateFormatter+GOJServerResponse.h"
+
 
     #import "GOJValueOrDefault.h"
 

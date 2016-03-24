@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import <CoreDataFullStack/CoreDataFullStack.h>
-
 /**
  Abstract parser instance with a class function to init it.
  */

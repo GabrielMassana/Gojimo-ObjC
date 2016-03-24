@@ -6,8 +6,6 @@
 //  Copyright © 2016 Gabriel Massana. All rights reserved.
 //
 
-#import <CoreOperation/CoreOperation.h>
-
 @interface GOJQualificationsParserOperation : COMOperation
 
 - (instancetype)initWithQualifications:(NSArray *)qualificationsResponse;

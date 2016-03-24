@@ -8,8 +8,6 @@
 
 #import "GOJQualificationsAPIManager.h"
 
-#import <CoreNetworking/CoreNetworking.h>
-
 #import "GOJQualificationsRequest.h"
 #import "GOJQualificationsParserOperation.h"
 

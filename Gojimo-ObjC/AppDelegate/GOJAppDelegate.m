@@ -8,11 +8,7 @@
 
 #import "GOJAppDelegate.h"
 
-#import <CoreDataFullStack/CoreDataFullStack.h>
-#import <CoreOperation/CoreOperation.h>
-
 #import "GOJRootNavigationController.h"
-
 
 @interface GOJAppDelegate () <CDFCoreDataManagerDelegate>
 

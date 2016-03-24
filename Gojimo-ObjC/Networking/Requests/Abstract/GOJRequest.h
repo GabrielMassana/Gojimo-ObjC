@@ -6,8 +6,6 @@
 //  Copyright © 2016 Gabriel Massana. All rights reserved.
 //
 
-#import <CoreNetworking/CoreNetworking.h>
-
 @interface GOJRequest : CNMRequest
 
 + (instancetype)requestForAPI;
