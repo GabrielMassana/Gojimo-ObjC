@@ -26,9 +26,7 @@
     {
         qualification.feed = feed;
     }
-    
-    [self.parserManagedObjectContext save:nil];
-    
+        
     return feed;
 }
 
