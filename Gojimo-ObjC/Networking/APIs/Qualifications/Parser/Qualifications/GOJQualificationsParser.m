@@ -32,7 +32,7 @@
     NSString *qualificationID = qualificationResponse[@"id"];
     
 //   TODO:   if (!qualificationID || <null>) {
-//        
+//     https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/NumbersandValues/Articles/Null.html   
 //    }
     
     GOJQualification *qualification = [GOJQualification fetchQualificationWithManagedObjectContext:self.parserManagedObjectContext
