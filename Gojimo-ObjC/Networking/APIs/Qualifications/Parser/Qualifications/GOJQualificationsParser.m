@@ -35,9 +35,7 @@
 - (GOJQualification *)parseQualification:(NSDictionary *)qualificationResponse
 {
     NSString *qualificationID = qualificationResponse[@"id"];
-    
-    NSLog(@"%@", qualificationID);
-    
+        
     GOJQualification *qualification = nil;
     
     if ([GOJValueOrDefault valueIsNotNil:qualificationID])
@@ -66,7 +64,6 @@
         
         /*-------------------*/
         
-        // protection for nil
         qualification.link = [GOJValueOrDefault value:qualificationResponse[@"link"]
                                             orDefault:qualification.link];
         

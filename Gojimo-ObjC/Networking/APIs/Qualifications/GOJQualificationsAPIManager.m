@@ -40,10 +40,6 @@
                                                                  options:NSJSONReadingMutableContainers
                                                                    error:nil];
             
-            //Parse json
-            NSLog(@"json = %@", json);
-            NSLog(@"json = %@", @(json.count));
-            
             // Call parse operation
             GOJQualificationsParserOperation *operation = [[GOJQualificationsParserOperation alloc] initWithQualifications:json];
             operation.operationQueueIdentifier = GOJLocalDataOperationQueueTypeIdentifier;

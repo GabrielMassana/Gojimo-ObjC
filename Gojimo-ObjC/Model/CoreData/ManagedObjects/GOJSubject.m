@@ -11,6 +11,16 @@
 
 @implementation GOJSubject
 
-// Insert code here to add functionality to your managed object subclass
++ (instancetype)fetchSubjectWithManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
+                                           subjectID:(NSString *)subjectID
+{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"subjectID MATCHES %@", subjectID];
+    
+    GOJSubject *subject = [CDFRetrievalService retrieveFirstEntryForEntityClass:[GOJSubject self]
+                                                                      predicate:predicate
+                                                           managedObjectContext:managedObjectContext];
+    
+    return subject;
+}
 
 @end

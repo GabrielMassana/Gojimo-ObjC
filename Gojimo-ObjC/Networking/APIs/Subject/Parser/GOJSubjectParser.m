@@ -37,7 +37,25 @@
     
     if ([GOJValueOrDefault valueIsNotNil:subjectID])
     {
+        subject = [GOJSubject fetchSubjectWithManagedObjectContext:self.parserManagedObjectContext
+                                                         subjectID:subjectID];
         
+        if (!subject)
+        {
+            subject = [CDFInsertService insertNewObjectForEntityClass:[GOJSubject self]
+                                               inManagedObjectContext:self.parserManagedObjectContext];
+            
+            subject.subjectID = subjectID;
+        }
+        
+        subject.link = [GOJValueOrDefault value:subjectResponse[@"link"]
+                                      orDefault:subject.link];
+        
+        subject.title = [GOJValueOrDefault value:subjectResponse[@"title"]
+                                       orDefault:subject.title];
+        
+        subject.colour = [GOJValueOrDefault value:subjectResponse[@"colour"]
+                                        orDefault:subject.colour];
     }
     
     return subject;
