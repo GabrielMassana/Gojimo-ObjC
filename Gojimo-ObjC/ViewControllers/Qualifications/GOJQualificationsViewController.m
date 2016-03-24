@@ -70,6 +70,16 @@
     return _tableView;
 }
 
+- (GOJQualificationsAdapter *)adapter
+{
+    if (!_adapter)
+    {
+        _adapter = [[GOJQualificationsAdapter alloc] init];
+    }
+    
+    return _adapter;
+}
+
 #pragma mark - Constraints
 
 - (void)updateViewConstraints

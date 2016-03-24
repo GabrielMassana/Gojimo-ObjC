@@ -31,13 +31,19 @@
     _tableView = tableView;
     [self didChangeValueForKey:NSStringFromSelector(@selector(tableView))];
     
+    /*-------------------*/
+
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    tableView.backgroundColor = [UIColor whiteColor];
-    tableView.rowHeight = 120.0 * DeviceSizeService.sharedInstance.resizeFactor
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = [UIColor whiteColor];
+    self.tableView.rowHeight = 70.0 * [GOJDeviceSizeService sharedInstance].resizeFactor;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    /*-------------------*/
     
     [self registerCells];
+    
+    /*-------------------*/
     
     [self.fetchedResultsController performFetch:nil];
 }
@@ -103,6 +109,11 @@
                                                                            forIndexPath:indexPath];
     
     [cell layoutByApplyingConstraints];
+    
+    if (indexPath.row % 2 == 0)
+    {
+        cell.backgroundColor = [UIColor redColor];
+    }
     
     return cell;
 }
