@@ -26,6 +26,10 @@
 		7A718A101CA33F770011FD58 /* GOJQualification.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A0A1CA33F770011FD58 /* GOJQualification.m */; };
 		7A718A111CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A0C1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m */; };
 		7A718A121CA33F770011FD58 /* GOJQualificationsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A0E1CA33F770011FD58 /* GOJQualificationsFeed.m */; };
+		7A718A171CA492D00011FD58 /* TradeGothic-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A718A141CA492D00011FD58 /* TradeGothic-Light.ttf */; };
+		7A718A181CA492D00011FD58 /* TradeGothicLT.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A718A151CA492D00011FD58 /* TradeGothicLT.ttf */; };
+		7A718A191CA492D00011FD58 /* TradeGothicNo.2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A718A161CA492D00011FD58 /* TradeGothicNo.2-Bold.ttf */; };
+		7A718A201CA493390011FD58 /* UIFont+GOJFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A1F1CA493390011FD58 /* UIFont+GOJFont.m */; };
 		C0039ABB1CA408F700437BBC /* GOJCountry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */; };
 		C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABA1CA408F700437BBC /* GOJCountry.m */; };
 		C0039AC11CA4090800437BBC /* GOJSubject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABE1CA4090800437BBC /* GOJSubject+CoreDataProperties.m */; };
@@ -74,6 +78,11 @@
 		7A718A0C1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJQualificationsFeed+CoreDataProperties.m"; sourceTree = "<group>"; };
 		7A718A0D1CA33F770011FD58 /* GOJQualificationsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsFeed.h; sourceTree = "<group>"; };
 		7A718A0E1CA33F770011FD58 /* GOJQualificationsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsFeed.m; sourceTree = "<group>"; };
+		7A718A141CA492D00011FD58 /* TradeGothic-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TradeGothic-Light.ttf"; sourceTree = "<group>"; };
+		7A718A151CA492D00011FD58 /* TradeGothicLT.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TradeGothicLT.ttf; sourceTree = "<group>"; };
+		7A718A161CA492D00011FD58 /* TradeGothicNo.2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TradeGothicNo.2-Bold.ttf"; sourceTree = "<group>"; };
+		7A718A1E1CA493390011FD58 /* UIFont+GOJFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+GOJFont.h"; sourceTree = "<group>"; };
+		7A718A1F1CA493390011FD58 /* UIFont+GOJFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+GOJFont.m"; sourceTree = "<group>"; };
 		C0039AB71CA408F700437BBC /* GOJCountry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOJCountry+CoreDataProperties.h"; sourceTree = "<group>"; };
 		C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJCountry+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C0039AB91CA408F700437BBC /* GOJCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJCountry.h; sourceTree = "<group>"; };
@@ -187,6 +196,7 @@
 		7A7189BF1CA312520011FD58 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A718A131CA492D00011FD58 /* Fonts */,
 				7A7189C11CA312520011FD58 /* Images */,
 			);
 			path = Resources;
@@ -419,6 +429,25 @@
 			path = Qualifications;
 			sourceTree = "<group>";
 		};
+		7A718A131CA492D00011FD58 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A141CA492D00011FD58 /* TradeGothic-Light.ttf */,
+				7A718A151CA492D00011FD58 /* TradeGothicLT.ttf */,
+				7A718A161CA492D00011FD58 /* TradeGothicNo.2-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7A718A1D1CA493210011FD58 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A1E1CA493390011FD58 /* UIFont+GOJFont.h */,
+				7A718A1F1CA493390011FD58 /* UIFont+GOJFont.m */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
 		C0039AC31CA42CAC00437BBC /* Country */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +468,7 @@
 		C0039AC81CA4382400437BBC /* Catagories */ = {
 			isa = PBXGroup;
 			children = (
+				7A718A1D1CA493210011FD58 /* UIFont */,
 				C0039AC91CA4382400437BBC /* NSDateFormatter */,
 			);
 			path = Catagories;
@@ -548,7 +578,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A718A171CA492D00011FD58 /* TradeGothic-Light.ttf in Resources */,
+				7A718A191CA492D00011FD58 /* TradeGothicNo.2-Bold.ttf in Resources */,
 				7A7189D31CA313310011FD58 /* Assets.xcassets in Resources */,
+				7A718A181CA492D00011FD58 /* TradeGothicLT.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +662,7 @@
 				7A7189EB1CA31E0B0011FD58 /* GOJAPIManager.m in Sources */,
 				7A7189E81CA31C480011FD58 /* Gojimo.xcdatamodeld in Sources */,
 				7A7189F41CA31F3A0011FD58 /* GOJQualificationsRequest.m in Sources */,
+				7A718A201CA493390011FD58 /* UIFont+GOJFont.m in Sources */,
 				C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */,
 				C0039AC71CA42D0F00437BBC /* GOJCountryParser.m in Sources */,
 				7A7189CA1CA312520011FD58 /* GOJAppDelegate.m in Sources */,
