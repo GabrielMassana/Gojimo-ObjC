@@ -26,6 +26,10 @@
 		7A718A101CA33F770011FD58 /* GOJQualification.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A0A1CA33F770011FD58 /* GOJQualification.m */; };
 		7A718A111CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A0C1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m */; };
 		7A718A121CA33F770011FD58 /* GOJQualificationsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A0E1CA33F770011FD58 /* GOJQualificationsFeed.m */; };
+		C0039ABB1CA408F700437BBC /* GOJCountry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */; };
+		C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABA1CA408F700437BBC /* GOJCountry.m */; };
+		C0039AC11CA4090800437BBC /* GOJSubject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABE1CA4090800437BBC /* GOJSubject+CoreDataProperties.m */; };
+		C0039AC21CA4090800437BBC /* GOJSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AC01CA4090800437BBC /* GOJSubject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,14 @@
 		7A718A0C1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJQualificationsFeed+CoreDataProperties.m"; sourceTree = "<group>"; };
 		7A718A0D1CA33F770011FD58 /* GOJQualificationsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsFeed.h; sourceTree = "<group>"; };
 		7A718A0E1CA33F770011FD58 /* GOJQualificationsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsFeed.m; sourceTree = "<group>"; };
+		C0039AB71CA408F700437BBC /* GOJCountry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOJCountry+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJCountry+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C0039AB91CA408F700437BBC /* GOJCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJCountry.h; sourceTree = "<group>"; };
+		C0039ABA1CA408F700437BBC /* GOJCountry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJCountry.m; sourceTree = "<group>"; };
+		C0039ABD1CA4090800437BBC /* GOJSubject+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOJSubject+CoreDataProperties.h"; sourceTree = "<group>"; };
+		C0039ABE1CA4090800437BBC /* GOJSubject+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJSubject+CoreDataProperties.m"; sourceTree = "<group>"; };
+		C0039ABF1CA4090800437BBC /* GOJSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJSubject.h; sourceTree = "<group>"; };
+		C0039AC01CA4090800437BBC /* GOJSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJSubject.m; sourceTree = "<group>"; };
 		C33E5DAA0BF9774096280871 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D7DA40EAE42271A34225C5E7 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -229,6 +241,10 @@
 		7A7189D01CA312D20011FD58 /* ManagedObjects */ = {
 			isa = PBXGroup;
 			children = (
+				C0039AB71CA408F700437BBC /* GOJCountry+CoreDataProperties.h */,
+				C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */,
+				C0039AB91CA408F700437BBC /* GOJCountry.h */,
+				C0039ABA1CA408F700437BBC /* GOJCountry.m */,
 				7A718A071CA33F770011FD58 /* GOJQualification+CoreDataProperties.h */,
 				7A718A081CA33F770011FD58 /* GOJQualification+CoreDataProperties.m */,
 				7A718A091CA33F770011FD58 /* GOJQualification.h */,
@@ -237,6 +253,10 @@
 				7A718A0C1CA33F770011FD58 /* GOJQualificationsFeed+CoreDataProperties.m */,
 				7A718A0D1CA33F770011FD58 /* GOJQualificationsFeed.h */,
 				7A718A0E1CA33F770011FD58 /* GOJQualificationsFeed.m */,
+				C0039ABD1CA4090800437BBC /* GOJSubject+CoreDataProperties.h */,
+				C0039ABE1CA4090800437BBC /* GOJSubject+CoreDataProperties.m */,
+				C0039ABF1CA4090800437BBC /* GOJSubject.h */,
+				C0039AC01CA4090800437BBC /* GOJSubject.m */,
 			);
 			path = ManagedObjects;
 			sourceTree = "<group>";
@@ -515,10 +535,13 @@
 				7A718A0F1CA33F770011FD58 /* GOJQualification+CoreDataProperties.m in Sources */,
 				7A7189F11CA31EDF0011FD58 /* GOJRequest.m in Sources */,
 				7A7189E51CA317640011FD58 /* GOJRootNavigationController.m in Sources */,
+				C0039AC21CA4090800437BBC /* GOJSubject.m in Sources */,
 				7A718A061CA328160011FD58 /* GOJQualificationsFeedParser.m in Sources */,
+				C0039ABB1CA408F700437BBC /* GOJCountry+CoreDataProperties.m in Sources */,
 				7A718A001CA323860011FD58 /* GOJQualificationsParserOperation.m in Sources */,
 				7A718A121CA33F770011FD58 /* GOJQualificationsFeed.m in Sources */,
 				7A7189EE1CA31E770011FD58 /* GOJQualificationsAPIManager.m in Sources */,
+				C0039AC11CA4090800437BBC /* GOJSubject+CoreDataProperties.m in Sources */,
 				7A7189E21CA3145C0011FD58 /* main.m in Sources */,
 				7A718A101CA33F770011FD58 /* GOJQualification.m in Sources */,
 				7A718A031CA328080011FD58 /* GOJQualificationsParser.m in Sources */,
@@ -527,6 +550,7 @@
 				7A7189EB1CA31E0B0011FD58 /* GOJAPIManager.m in Sources */,
 				7A7189E81CA31C480011FD58 /* Gojimo.xcdatamodeld in Sources */,
 				7A7189F41CA31F3A0011FD58 /* GOJQualificationsRequest.m in Sources */,
+				C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */,
 				7A7189CA1CA312520011FD58 /* GOJAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

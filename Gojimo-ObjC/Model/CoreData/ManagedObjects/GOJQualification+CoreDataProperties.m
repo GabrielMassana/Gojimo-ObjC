@@ -2,7 +2,7 @@
 //  GOJQualification+CoreDataProperties.m
 //  
 //
-//  Created by Gabriel Massana on 23/3/16.
+//  Created by GabrielMassana on 24/03/2016.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,7 +13,11 @@
 
 @implementation GOJQualification (CoreDataProperties)
 
-@dynamic qualificationsID;
+@dynamic qualificationID;
+@dynamic name;
+@dynamic link;
 @dynamic feed;
+@dynamic country;
+@dynamic subjects;
 
 @end

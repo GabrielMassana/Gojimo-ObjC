@@ -1,15 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Xcode 7.0">
+    <entity name="GOJCountry" representedClassName=".GOJCountry" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="qualifications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GOJQualification" inverseName="country" inverseEntity="GOJQualification" syncable="YES"/>
+    </entity>
     <entity name="GOJQualification" representedClassName="GOJQualification" syncable="YES">
-        <attribute name="qualificationsID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="qualificationID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GOJCountry" inverseName="qualifications" inverseEntity="GOJCountry" syncable="YES"/>
         <relationship name="feed" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GOJQualificationsFeed" inverseName="qualifications" inverseEntity="GOJQualificationsFeed" syncable="YES"/>
+        <relationship name="subjects" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GOJSubject" inverseName="qualification" inverseEntity="GOJSubject" syncable="YES"/>
     </entity>
     <entity name="GOJQualificationsFeed" representedClassName="GOJQualificationsFeed" syncable="YES">
         <attribute name="qualificationsFeedID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="qualifications" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GOJQualification" inverseName="feed" inverseEntity="GOJQualification" syncable="YES"/>
     </entity>
+    <entity name="GOJSubject" representedClassName=".GOJSubject" syncable="YES">
+        <attribute name="colour" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="subjectID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="qualification" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GOJQualification" inverseName="subjects" inverseEntity="GOJQualification" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="GOJQualification" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="GOJQualification" positionX="0" positionY="0" width="128" height="135"/>
         <element name="GOJQualificationsFeed" positionX="0" positionY="0" width="128" height="75"/>
+        <element name="GOJCountry" positionX="9" positionY="27" width="128" height="135"/>
+        <element name="GOJSubject" positionX="18" positionY="72" width="128" height="120"/>
     </elements>
 </model>

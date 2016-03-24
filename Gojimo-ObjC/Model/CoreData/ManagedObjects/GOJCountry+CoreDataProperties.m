@@ -1,5 +1,5 @@
 //
-//  GOJQualificationsFeed+CoreDataProperties.m
+//  GOJCountry+CoreDataProperties.m
 //  
 //
 //  Created by GabrielMassana on 24/03/2016.
@@ -9,11 +9,15 @@
 //  to delete and recreate this implementation file for your updated model.
 //
 
-#import "GOJQualificationsFeed+CoreDataProperties.h"
+#import "GOJCountry+CoreDataProperties.h"
 
-@implementation GOJQualificationsFeed (CoreDataProperties)
+@implementation GOJCountry (CoreDataProperties)
 
-@dynamic qualificationsFeedID;
+@dynamic code;
+@dynamic createdAt;
+@dynamic link;
+@dynamic name;
+@dynamic updatedAt;
 @dynamic qualifications;
 
 @end

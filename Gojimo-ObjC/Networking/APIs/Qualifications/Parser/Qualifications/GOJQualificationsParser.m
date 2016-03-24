@@ -8,13 +8,28 @@
 
 #import "GOJQualificationsParser.h"
 
+#import "GOJQualification.h"
+
 @implementation GOJQualificationsParser
 
 - (NSArray *)parseQualifications:(NSArray *)qualificationsResponse
 {
     NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:qualificationsResponse.count];
     
+    for (NSDictionary *qualification in qualificationsResponse)
+    {
+        [array addObject:[self parseQualification:qualification]];
+    }
+    
     return array;
+}
+
+- (GOJQualification *)parseQualification:(NSDictionary *)qualificationResponse
+{
+    NSLog(@"qualification: %@", qualificationResponse);
+    
+    //Crash
+    return nil;
 }
 
 @end
