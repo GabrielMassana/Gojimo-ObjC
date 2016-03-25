@@ -39,6 +39,7 @@
 		7A718A401CA5717E0011FD58 /* GOJSubjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A3F1CA5717E0011FD58 /* GOJSubjectsViewController.m */; };
 		7A718A431CA571990011FD58 /* GOJSubjectsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A421CA571990011FD58 /* GOJSubjectsAdapter.m */; };
 		7A718A461CA571BB0011FD58 /* GOJSectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A451CA571BB0011FD58 /* GOJSectionTableViewCell.m */; };
+		7A718A4E1CA58A0B0011FD58 /* Gojimo_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A4D1CA58A0B0011FD58 /* Gojimo_ObjCTests.m */; };
 		C0039ABB1CA408F700437BBC /* GOJCountry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */; };
 		C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABA1CA408F700437BBC /* GOJCountry.m */; };
 		C0039AC11CA4090800437BBC /* GOJSubject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABE1CA4090800437BBC /* GOJSubject+CoreDataProperties.m */; };
@@ -48,6 +49,16 @@
 		C0039AD11CA450E300437BBC /* GOJValueOrDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AD01CA450E300437BBC /* GOJValueOrDefault.m */; };
 		C0039AD61CA45B7000437BBC /* GOJSubjectParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AD51CA45B7000437BBC /* GOJSubjectParser.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7A718A501CA58A0B0011FD58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A7189971CA3111F0011FD58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A71899E1CA3111F0011FD58;
+			remoteInfo = "Gojimo-ObjC";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1E0E385334E90A882E82B10D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +121,9 @@
 		7A718A421CA571990011FD58 /* GOJSubjectsAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJSubjectsAdapter.m; sourceTree = "<group>"; };
 		7A718A441CA571BB0011FD58 /* GOJSectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJSectionTableViewCell.h; sourceTree = "<group>"; };
 		7A718A451CA571BB0011FD58 /* GOJSectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJSectionTableViewCell.m; sourceTree = "<group>"; };
+		7A718A4B1CA58A0B0011FD58 /* Gojimo-ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gojimo-ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A718A4D1CA58A0B0011FD58 /* Gojimo_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gojimo_ObjCTests.m; sourceTree = "<group>"; };
+		7A718A4F1CA58A0B0011FD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0039AB71CA408F700437BBC /* GOJCountry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOJCountry+CoreDataProperties.h"; sourceTree = "<group>"; };
 		C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJCountry+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C0039AB91CA408F700437BBC /* GOJCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJCountry.h; sourceTree = "<group>"; };
@@ -139,6 +153,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A718A481CA58A0B0011FD58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -163,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				7A7189A11CA3111F0011FD58 /* Gojimo-ObjC */,
+				7A718A4C1CA58A0B0011FD58 /* Gojimo-ObjCTests */,
 				7A7189A01CA3111F0011FD58 /* Products */,
 				316ECB674200B72309C83D8E /* Pods */,
 				6D3FE3B76C1F7FEF43563179 /* Frameworks */,
@@ -173,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				7A71899F1CA3111F0011FD58 /* Gojimo-ObjC.app */,
+				7A718A4B1CA58A0B0011FD58 /* Gojimo-ObjCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -573,6 +596,15 @@
 			path = TableViewCell;
 			sourceTree = "<group>";
 		};
+		7A718A4C1CA58A0B0011FD58 /* Gojimo-ObjCTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A4D1CA58A0B0011FD58 /* Gojimo_ObjCTests.m */,
+				7A718A4F1CA58A0B0011FD58 /* Info.plist */,
+			);
+			path = "Gojimo-ObjCTests";
+			sourceTree = "<group>";
+		};
 		C0039AC31CA42CAC00437BBC /* Country */ = {
 			isa = PBXGroup;
 			children = (
@@ -666,6 +698,24 @@
 			productReference = 7A71899F1CA3111F0011FD58 /* Gojimo-ObjC.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7A718A4A1CA58A0B0011FD58 /* Gojimo-ObjCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A718A521CA58A0B0011FD58 /* Build configuration list for PBXNativeTarget "Gojimo-ObjCTests" */;
+			buildPhases = (
+				7A718A471CA58A0B0011FD58 /* Sources */,
+				7A718A481CA58A0B0011FD58 /* Frameworks */,
+				7A718A491CA58A0B0011FD58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A718A511CA58A0B0011FD58 /* PBXTargetDependency */,
+			);
+			name = "Gojimo-ObjCTests";
+			productName = "Gojimo-ObjCTests";
+			productReference = 7A718A4B1CA58A0B0011FD58 /* Gojimo-ObjCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -678,6 +728,10 @@
 				TargetAttributes = {
 					7A71899E1CA3111F0011FD58 = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					7A718A4A1CA58A0B0011FD58 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 7A71899E1CA3111F0011FD58;
 					};
 				};
 			};
@@ -695,6 +749,7 @@
 			projectRoot = "";
 			targets = (
 				7A71899E1CA3111F0011FD58 /* Gojimo-ObjC */,
+				7A718A4A1CA58A0B0011FD58 /* Gojimo-ObjCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -708,6 +763,13 @@
 				7A718A191CA492D00011FD58 /* TradeGothicNo.2-Bold.ttf in Resources */,
 				7A7189D31CA313310011FD58 /* Assets.xcassets in Resources */,
 				7A718A181CA492D00011FD58 /* TradeGothicLT.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A718A491CA58A0B0011FD58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,7 +866,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A718A471CA58A0B0011FD58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A718A4E1CA58A0B0011FD58 /* Gojimo_ObjCTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A718A511CA58A0B0011FD58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A71899E1CA3111F0011FD58 /* Gojimo-ObjC */;
+			targetProxy = 7A718A501CA58A0B0011FD58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		7A7189B41CA3111F0011FD58 /* Debug */ = {
@@ -917,6 +995,30 @@
 			};
 			name = Release;
 		};
+		7A718A531CA58A0B0011FD58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Gojimo-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Massana.Gojimo-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gojimo-ObjC.app/Gojimo-ObjC";
+			};
+			name = Debug;
+		};
+		7A718A541CA58A0B0011FD58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Gojimo-ObjCTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Gabriel-Massana.Gojimo-ObjCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gojimo-ObjC.app/Gojimo-ObjC";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -937,6 +1039,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		7A718A521CA58A0B0011FD58 /* Build configuration list for PBXNativeTarget "Gojimo-ObjCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A718A531CA58A0B0011FD58 /* Debug */,
+				7A718A541CA58A0B0011FD58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 
