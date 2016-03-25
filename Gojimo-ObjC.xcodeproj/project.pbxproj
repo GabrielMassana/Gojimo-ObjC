@@ -32,10 +32,13 @@
 		7A718A201CA493390011FD58 /* UIFont+GOJFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A1F1CA493390011FD58 /* UIFont+GOJFont.m */; };
 		7A718A271CA4968C0011FD58 /* GOJQualificationsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A261CA4968C0011FD58 /* GOJQualificationsAdapter.m */; };
 		7A718A2A1CA49A220011FD58 /* GOJTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A291CA49A220011FD58 /* GOJTableViewCell.m */; };
-		7A718A2D1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A2C1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m */; };
+		7A718A2D1CA49AC70011FD58 /* GOJQualificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A2C1CA49AC70011FD58 /* GOJQualificationTableViewCell.m */; };
 		7A718A311CA49BB60011FD58 /* GOJDeviceSizeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A301CA49BB60011FD58 /* GOJDeviceSizeService.m */; };
 		7A718A351CA541300011FD58 /* GOJQualificationSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A341CA541300011FD58 /* GOJQualificationSectionHeaderView.m */; };
 		7A718A391CA55C350011FD58 /* UIColor+GOJCOlor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A381CA55C350011FD58 /* UIColor+GOJCOlor.m */; };
+		7A718A401CA5717E0011FD58 /* GOJSubjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A3F1CA5717E0011FD58 /* GOJSubjectsViewController.m */; };
+		7A718A431CA571990011FD58 /* GOJSubjectsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A421CA571990011FD58 /* GOJSubjectsAdapter.m */; };
+		7A718A461CA571BB0011FD58 /* GOJSectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A451CA571BB0011FD58 /* GOJSectionTableViewCell.m */; };
 		C0039ABB1CA408F700437BBC /* GOJCountry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */; };
 		C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABA1CA408F700437BBC /* GOJCountry.m */; };
 		C0039AC11CA4090800437BBC /* GOJSubject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABE1CA4090800437BBC /* GOJSubject+CoreDataProperties.m */; };
@@ -93,14 +96,20 @@
 		7A718A261CA4968C0011FD58 /* GOJQualificationsAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsAdapter.m; sourceTree = "<group>"; };
 		7A718A281CA49A220011FD58 /* GOJTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJTableViewCell.h; sourceTree = "<group>"; };
 		7A718A291CA49A220011FD58 /* GOJTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJTableViewCell.m; sourceTree = "<group>"; };
-		7A718A2B1CA49AC70011FD58 /* GOJQualificationsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationsTableViewCell.h; sourceTree = "<group>"; };
-		7A718A2C1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsTableViewCell.m; sourceTree = "<group>"; };
+		7A718A2B1CA49AC70011FD58 /* GOJQualificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationTableViewCell.h; sourceTree = "<group>"; };
+		7A718A2C1CA49AC70011FD58 /* GOJQualificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationTableViewCell.m; sourceTree = "<group>"; };
 		7A718A2F1CA49BB60011FD58 /* GOJDeviceSizeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJDeviceSizeService.h; sourceTree = "<group>"; };
 		7A718A301CA49BB60011FD58 /* GOJDeviceSizeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJDeviceSizeService.m; sourceTree = "<group>"; };
 		7A718A331CA541300011FD58 /* GOJQualificationSectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJQualificationSectionHeaderView.h; sourceTree = "<group>"; };
 		7A718A341CA541300011FD58 /* GOJQualificationSectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationSectionHeaderView.m; sourceTree = "<group>"; };
 		7A718A371CA55C350011FD58 /* UIColor+GOJCOlor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GOJCOlor.h"; sourceTree = "<group>"; };
 		7A718A381CA55C350011FD58 /* UIColor+GOJCOlor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GOJCOlor.m"; sourceTree = "<group>"; };
+		7A718A3E1CA5717E0011FD58 /* GOJSubjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJSubjectsViewController.h; sourceTree = "<group>"; };
+		7A718A3F1CA5717E0011FD58 /* GOJSubjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJSubjectsViewController.m; sourceTree = "<group>"; };
+		7A718A411CA571990011FD58 /* GOJSubjectsAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJSubjectsAdapter.h; sourceTree = "<group>"; };
+		7A718A421CA571990011FD58 /* GOJSubjectsAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJSubjectsAdapter.m; sourceTree = "<group>"; };
+		7A718A441CA571BB0011FD58 /* GOJSectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJSectionTableViewCell.h; sourceTree = "<group>"; };
+		7A718A451CA571BB0011FD58 /* GOJSectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJSectionTableViewCell.m; sourceTree = "<group>"; };
 		C0039AB71CA408F700437BBC /* GOJCountry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOJCountry+CoreDataProperties.h"; sourceTree = "<group>"; };
 		C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJCountry+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C0039AB91CA408F700437BBC /* GOJCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJCountry.h; sourceTree = "<group>"; };
@@ -250,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				7A7189D91CA313580011FD58 /* Qualifications */,
+				7A718A3A1CA571620011FD58 /* Subjects */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -492,8 +502,8 @@
 		7A718A241CA496740011FD58 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				7A718A2B1CA49AC70011FD58 /* GOJQualificationsTableViewCell.h */,
-				7A718A2C1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m */,
+				7A718A2B1CA49AC70011FD58 /* GOJQualificationTableViewCell.h */,
+				7A718A2C1CA49AC70011FD58 /* GOJQualificationTableViewCell.m */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -524,6 +534,43 @@
 				7A718A381CA55C350011FD58 /* UIColor+GOJCOlor.m */,
 			);
 			path = UIColor;
+			sourceTree = "<group>";
+		};
+		7A718A3A1CA571620011FD58 /* Subjects */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A3E1CA5717E0011FD58 /* GOJSubjectsViewController.h */,
+				7A718A3F1CA5717E0011FD58 /* GOJSubjectsViewController.m */,
+				7A718A3B1CA571620011FD58 /* Adapter */,
+				7A718A3C1CA571620011FD58 /* Views */,
+			);
+			path = Subjects;
+			sourceTree = "<group>";
+		};
+		7A718A3B1CA571620011FD58 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A411CA571990011FD58 /* GOJSubjectsAdapter.h */,
+				7A718A421CA571990011FD58 /* GOJSubjectsAdapter.m */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		7A718A3C1CA571620011FD58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A3D1CA571620011FD58 /* TableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A718A3D1CA571620011FD58 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A441CA571BB0011FD58 /* GOJSectionTableViewCell.h */,
+				7A718A451CA571BB0011FD58 /* GOJSectionTableViewCell.m */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		C0039AC31CA42CAC00437BBC /* Country */ = {
@@ -727,6 +774,7 @@
 				7A7189F11CA31EDF0011FD58 /* GOJRequest.m in Sources */,
 				7A7189E51CA317640011FD58 /* GOJRootNavigationController.m in Sources */,
 				C0039AC21CA4090800437BBC /* GOJSubject.m in Sources */,
+				7A718A461CA571BB0011FD58 /* GOJSectionTableViewCell.m in Sources */,
 				7A718A061CA328160011FD58 /* GOJQualificationsFeedParser.m in Sources */,
 				C0039ABB1CA408F700437BBC /* GOJCountry+CoreDataProperties.m in Sources */,
 				7A718A001CA323860011FD58 /* GOJQualificationsParserOperation.m in Sources */,
@@ -735,6 +783,7 @@
 				7A7189EE1CA31E770011FD58 /* GOJQualificationsAPIManager.m in Sources */,
 				C0039AC11CA4090800437BBC /* GOJSubject+CoreDataProperties.m in Sources */,
 				7A7189E21CA3145C0011FD58 /* main.m in Sources */,
+				7A718A401CA5717E0011FD58 /* GOJSubjectsViewController.m in Sources */,
 				7A718A101CA33F770011FD58 /* GOJQualification.m in Sources */,
 				7A718A031CA328080011FD58 /* GOJQualificationsParser.m in Sources */,
 				7A718A2A1CA49A220011FD58 /* GOJTableViewCell.m in Sources */,
@@ -743,13 +792,14 @@
 				7A7189DC1CA313580011FD58 /* GOJQualificationsViewController.m in Sources */,
 				7A7189FA1CA321B70011FD58 /* GOJParser.m in Sources */,
 				7A7189EB1CA31E0B0011FD58 /* GOJAPIManager.m in Sources */,
+				7A718A431CA571990011FD58 /* GOJSubjectsAdapter.m in Sources */,
 				7A718A271CA4968C0011FD58 /* GOJQualificationsAdapter.m in Sources */,
 				7A7189E81CA31C480011FD58 /* Gojimo.xcdatamodeld in Sources */,
 				7A7189F41CA31F3A0011FD58 /* GOJQualificationsRequest.m in Sources */,
 				7A718A201CA493390011FD58 /* UIFont+GOJFont.m in Sources */,
 				C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */,
 				C0039AC71CA42D0F00437BBC /* GOJCountryParser.m in Sources */,
-				7A718A2D1CA49AC70011FD58 /* GOJQualificationsTableViewCell.m in Sources */,
+				7A718A2D1CA49AC70011FD58 /* GOJQualificationTableViewCell.m in Sources */,
 				7A7189CA1CA312520011FD58 /* GOJAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

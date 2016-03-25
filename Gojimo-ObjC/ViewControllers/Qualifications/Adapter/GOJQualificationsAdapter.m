@@ -9,7 +9,7 @@
 #import "GOJQualificationsAdapter.h"
 
 #import "GOJQualification.h"
-#import "GOJQualificationsTableViewCell.h"
+#import "GOJQualificationTableViewCell.h"
 #import "GOJQualificationSectionHeaderView.h"
 
 @interface GOJQualificationsAdapter () <UITableViewDataSource, UITableViewDelegate>
@@ -109,13 +109,13 @@
 
 - (void)registerCells
 {
-    [self.tableView registerClass:[GOJQualificationsTableViewCell class]
-           forCellReuseIdentifier:[GOJQualificationsTableViewCell reuseIdentifier]];
+    [self.tableView registerClass:[GOJQualificationTableViewCell class]
+           forCellReuseIdentifier:[GOJQualificationTableViewCell reuseIdentifier]];
 }
 
 #pragma mark - ConfigureCell
 
-- (void)configureCell:(GOJQualificationsTableViewCell *)cell indexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(GOJQualificationTableViewCell *)cell indexPath:(NSIndexPath *)indexPath
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[indexPath.section];
     GOJQualification *qualification = sectionInfo.objects[indexPath.row];
@@ -144,7 +144,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GOJQualificationsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[GOJQualificationsTableViewCell reuseIdentifier]
+    GOJQualificationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[GOJQualificationTableViewCell reuseIdentifier]
                                                                            forIndexPath:indexPath];
     
     [self configureCell:cell

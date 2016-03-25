@@ -10,7 +10,7 @@
 
 @class GOJQualification;
 
-@interface GOJQualificationsTableViewCell : GOJTableViewCell
+@interface GOJQualificationTableViewCell : GOJTableViewCell
 
 - (void)configureWithQualification:(GOJQualification *)qualification;
 

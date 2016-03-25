@@ -6,11 +6,11 @@
 //  Copyright © 2016 Gabriel Massana. All rights reserved.
 //
 
-#import "GOJQualificationsTableViewCell.h"
+#import "GOJQualificationTableViewCell.h"
 
 #import "GOJQualification.h"
 
-@interface GOJQualificationsTableViewCell ()
+@interface GOJQualificationTableViewCell ()
 
 @property (nonatomic, strong) UIView *separationLine;
 @property (nonatomic, strong) UILabel *nameLabel;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation GOJQualificationsTableViewCell
+@implementation GOJQualificationTableViewCell
 
 #pragma mark - Init
 
