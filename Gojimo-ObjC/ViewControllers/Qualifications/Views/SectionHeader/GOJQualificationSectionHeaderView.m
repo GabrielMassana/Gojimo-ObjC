@@ -14,7 +14,6 @@
 
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UIImageView *flagImageView;
-@property (nonatomic, strong) UIView *separationLine;
 @property (nonatomic, strong) NSString *countryName;
 
 @end
@@ -31,11 +30,10 @@
     {
         self.countryName = countryName;
         
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = [UIColor goj_alto];
         
         [self addSubview:self.flagImageView];
         [self addSubview:self.nameLabel];
-        [self addSubview:self.separationLine];
     }
     
     return self;
@@ -76,18 +74,6 @@
     return _flagImageView;
 }
 
-- (UIView *)separationLine
-{
-    if (!_separationLine)
-    {
-        _separationLine = [UIView newAutoLayoutView];
-        
-        _separationLine.backgroundColor = [UIColor goj_alto];
-    }
-    
-    return _separationLine;
-}
-
 #pragma mark - Constraints
 
 - (void)updateConstraints
@@ -102,19 +88,6 @@
                      withOffset:5.0f];
     
     /*-------------------*/
-    
-    [self.separationLine autoPinEdgeToSuperviewEdge:ALEdgeBottom];
-    
-    [self.separationLine autoPinEdgeToSuperviewEdge:ALEdgeLeft
-                                          withInset:5.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
-    
-    [self.separationLine autoPinEdgeToSuperviewEdge:ALEdgeRight
-                                          withInset:5.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
-    
-    [self.separationLine autoSetDimension:ALDimensionHeight
-                                   toSize:0.5f * [GOJDeviceSizeService sharedInstance].resizeFactor];
-    
-    /*-------------------*/
 
     [self.flagImageView autoPinEdgeToSuperviewEdge:ALEdgeLeft
                                          withInset:5.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
@@ -126,7 +99,6 @@
     
     [self.flagImageView autoSetDimension:ALDimensionHeight
                                   toSize:16.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
-    
     
     /*-------------------*/
 
