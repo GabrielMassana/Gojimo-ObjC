@@ -8,7 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#import "GOJQualification.h"
+
 @protocol GOJQualificationsAdapterDelegate <NSObject>
+
+- (void)didSelectQualification:(GOJQualification *)qualification;
 
 @end
 

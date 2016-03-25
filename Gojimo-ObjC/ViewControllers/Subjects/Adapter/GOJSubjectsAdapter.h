@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class GOJQualification;
+
 @interface GOJSubjectsAdapter : NSObject
+
+@property (nonatomic, strong) UITableView *tableView;
+
+- (instancetype)initWithQualification:(GOJQualification *)qualification;
 
 @end

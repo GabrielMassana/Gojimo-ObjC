@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class GOJQualification;
+
 @interface GOJSubjectsViewController : UIViewController
+
+- (instancetype)initWithQualification:(GOJQualification *)qualification;
 
 @end

@@ -10,6 +10,5 @@
 
 @interface GOJQualificationsViewController : UIViewController
 
-
 @end
 

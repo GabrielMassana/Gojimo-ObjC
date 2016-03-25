@@ -39,7 +39,7 @@
     return self;
 }
 
-#pragma mark - Update
+#pragma mark - Configure
 
 - (void)configureWithQualification:(GOJQualification *)qualification
 {
@@ -131,16 +131,6 @@
     /*-------------------*/
     
     [super updateConstraints];
-}
-
-#pragma mark - PrepareForReuse
-
-- (void)prepareForReuse
-{
-    [super prepareForReuse];
-    
-    self.backgroundColor = [UIColor whiteColor];
-
 }
 
 @end

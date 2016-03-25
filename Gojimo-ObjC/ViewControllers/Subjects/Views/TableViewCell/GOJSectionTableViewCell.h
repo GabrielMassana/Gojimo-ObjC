@@ -8,6 +8,10 @@
 
 #import "GOJTableViewCell.h"
 
+@class GOJSubject;
+
 @interface GOJSectionTableViewCell : GOJTableViewCell
+
+- (void)configureWithSubject:(GOJSubject *)subject;
 
 @end

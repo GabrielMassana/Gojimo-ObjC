@@ -10,6 +10,7 @@
 
 #import "GOJQualificationsAPIManager.h"
 #import "GOJQualificationsAdapter.h"
+#import "GOJSubjectsViewController.h"
 
 @interface GOJQualificationsViewController () <GOJQualificationsAdapterDelegate>
 
@@ -79,6 +80,7 @@
     if (!_adapter)
     {
         _adapter = [[GOJQualificationsAdapter alloc] init];
+        _adapter.delegate = self;
     }
     
     return _adapter;
@@ -115,5 +117,13 @@
 }
 
 #pragma mark - GOJQualificationsAdapterDelegate
+
+- (void)didSelectQualification:(GOJQualification *)qualification
+{
+    GOJSubjectsViewController *subjectsViewController = [[GOJSubjectsViewController alloc] initWithQualification:qualification];
+    
+    [self.navigationController pushViewController:subjectsViewController
+                                         animated:YES];
+}
 
 @end

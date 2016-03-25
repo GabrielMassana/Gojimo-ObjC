@@ -135,13 +135,6 @@
     return self.fetchedResultsController.sections.count;
 }
 
-- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[section];
-    
-    return sectionInfo.name;
-}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GOJQualificationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[GOJQualificationTableViewCell reuseIdentifier]
@@ -155,20 +148,27 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[section];
-    
-    
     
     GOJQualificationSectionHeaderView *sectionHeaderView = [[GOJQualificationSectionHeaderView alloc] initWithFrame:CGRectMake(0.0f,
                                                                                                                                0.0f,
                                                                                                                                CGRectGetWidth([UIScreen mainScreen].bounds),
                                                                                                                                35.0 * [GOJDeviceSizeService sharedInstance].resizeFactor)
                                                                                                         countryName:sectionInfo.name];
-
     
     return sectionHeaderView;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[indexPath.section];
+    GOJQualification *qualification = sectionInfo.objects[indexPath.row];
+
+    [self.delegate didSelectQualification:qualification];
 }
 
 @end
