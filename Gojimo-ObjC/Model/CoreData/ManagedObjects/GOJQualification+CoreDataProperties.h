@@ -2,7 +2,7 @@
 //  GOJQualification+CoreDataProperties.h
 //  
 //
-//  Created by GabrielMassana on 24/03/2016.
+//  Created by Gabriel Massana on 25/3/16.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,12 +19,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GOJQualification (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *qualificationID;
-@property (nullable, nonatomic, retain) NSString *name;
 @property (nullable, nonatomic, retain) NSString *link;
-@property (nullable, nonatomic, retain) GOJQualificationsFeed *feed;
+@property (nullable, nonatomic, retain) NSString *name;
+@property (nullable, nonatomic, retain) NSString *qualificationID;
 @property (nullable, nonatomic, retain) GOJCountry *country;
-@property (nullable, nonatomic, retain) GOJSubject *subjects;
+@property (nullable, nonatomic, retain) GOJQualificationsFeed *feed;
+@property (nullable, nonatomic, retain) NSSet<GOJSubject *> *subjects;
+
+@end
+
+@interface GOJQualification (CoreDataGeneratedAccessors)
+
+- (void)addSubjectsObject:(GOJSubject *)value;
+- (void)removeSubjectsObject:(GOJSubject *)value;
+- (void)addSubjects:(NSSet<GOJSubject *> *)values;
+- (void)removeSubjects:(NSSet<GOJSubject *> *)values;
 
 @end
 

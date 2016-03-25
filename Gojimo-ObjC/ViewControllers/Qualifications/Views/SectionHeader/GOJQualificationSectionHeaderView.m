@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UILabel *nameLabel;
 @property (nonatomic, strong) UIImageView *flagImageView;
+@property (nonatomic, strong) UIView *separationLine;
 @property (nonatomic, strong) NSString *countryName;
 
 @end
@@ -34,6 +35,7 @@
         
         [self addSubview:self.flagImageView];
         [self addSubview:self.nameLabel];
+        [self addSubview:self.separationLine];
     }
     
     return self;
@@ -48,7 +50,7 @@
         _nameLabel = [UILabel newAutoLayoutView];
         
         _nameLabel.text = self.countryName;
-        _nameLabel.font = [UIFont goj_tradeGothicNo2BoldWithSize:15.0];
+        _nameLabel.font = [UIFont goj_tradeGothicNo2BoldWithSize:13.0];
         _nameLabel.textColor = [UIColor goj_scorpion];
     }
     
@@ -61,10 +63,29 @@
     {
         _flagImageView = [UIImageView newAutoLayoutView];
         
-        _flagImageView.backgroundColor = [UIColor orangeColor];
+        UIImage *image = [UIImage imageNamed:self.countryName];
+        
+        if (!image)
+        {
+            image = [UIImage imageNamed:@"United Nations"];
+        }
+        
+        _flagImageView.image = image;
     }
     
     return _flagImageView;
+}
+
+- (UIView *)separationLine
+{
+    if (!_separationLine)
+    {
+        _separationLine = [UIView newAutoLayoutView];
+        
+        _separationLine.backgroundColor = [UIColor goj_alto];
+    }
+    
+    return _separationLine;
 }
 
 #pragma mark - Constraints
@@ -79,20 +100,33 @@
                          toEdge:ALEdgeRight
                          ofView:self.flagImageView
                      withOffset:5.0f];
-
+    
+    /*-------------------*/
+    
+    [self.separationLine autoPinEdgeToSuperviewEdge:ALEdgeBottom];
+    
+    [self.separationLine autoPinEdgeToSuperviewEdge:ALEdgeLeft
+                                          withInset:5.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
+    
+    [self.separationLine autoPinEdgeToSuperviewEdge:ALEdgeRight
+                                          withInset:5.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
+    
+    [self.separationLine autoSetDimension:ALDimensionHeight
+                                   toSize:0.5f * [GOJDeviceSizeService sharedInstance].resizeFactor];
+    
     /*-------------------*/
 
     [self.flagImageView autoPinEdgeToSuperviewEdge:ALEdgeLeft
                                          withInset:5.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
     
-    [self.flagImageView autoPinEdgeToSuperviewEdge:ALEdgeTop
-                                         withInset:5.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
-    
-    [self.flagImageView autoPinEdgeToSuperviewEdge:ALEdgeBottom
-                                         withInset:5.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
+    [self.flagImageView autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
     
     [self.flagImageView autoSetDimension:ALDimensionWidth
-                                  toSize:(35.0f - 10.0f) * [GOJDeviceSizeService sharedInstance].resizeFactor];
+                                  toSize:16.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
+    
+    [self.flagImageView autoSetDimension:ALDimensionHeight
+                                  toSize:16.0f * [GOJDeviceSizeService sharedInstance].resizeFactor];
+    
     
     /*-------------------*/
 

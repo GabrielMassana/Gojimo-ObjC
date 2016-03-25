@@ -147,16 +147,11 @@
     GOJQualificationsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[GOJQualificationsTableViewCell reuseIdentifier]
                                                                            forIndexPath:indexPath];
     
-    [cell layoutByApplyingConstraints];
-    
-    if (indexPath.row % 2 == 0)
-    {
-        cell.backgroundColor = [UIColor redColor];
-    }
-    
     [self configureCell:cell
               indexPath:indexPath];
     
+    [cell layoutByApplyingConstraints];
+
     return cell;
 }
 

@@ -2,7 +2,7 @@
 //  GOJSubject+CoreDataProperties.m
 //  
 //
-//  Created by GabrielMassana on 24/03/2016.
+//  Created by Gabriel Massana on 25/3/16.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,9 +13,9 @@
 
 @implementation GOJSubject (CoreDataProperties)
 
-@dynamic subjectID;
 @dynamic colour;
 @dynamic link;
+@dynamic subjectID;
 @dynamic title;
 @dynamic qualification;
 
