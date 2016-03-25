@@ -10,10 +10,11 @@
 
 #import "GOJSubjectsAdapter.h"
 #import "GOJQualification.h"
+#import "GOJSubjectsEmptyView.h"
 
 @interface GOJSubjectsViewController ()
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) GOJTableView *tableView;
 
 @property (nonatomic, strong) GOJSubjectsAdapter *adapter;
 
@@ -22,6 +23,8 @@
 @property (nonatomic, strong) GOJQualification *qualification;
 
 @property (nonatomic, strong) UIBarButtonItem *backButton;
+
+@property (nonatomic, strong) GOJSubjectsEmptyView *emptyView;
 
 @end
 
@@ -65,13 +68,14 @@
 
 #pragma mark - Subviews
 
-- (UITableView *)tableView
+- (GOJTableView *)tableView
 {
     if (!_tableView)
     {
-        _tableView = [UITableView newAutoLayoutView];
+        _tableView = [GOJTableView newAutoLayoutView];
         
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _tableView.emptyView = self.emptyView;
     }
     
     return _tableView;
@@ -85,6 +89,19 @@
     }
     
     return _adapter;
+}
+
+- (GOJSubjectsEmptyView *)emptyView
+{
+    if (!_emptyView)
+    {
+        _emptyView = [[GOJSubjectsEmptyView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                            0.0f,
+                                                                            CGRectGetWidth([UIScreen mainScreen].bounds),
+                                                                            CGRectGetHeight([UIScreen mainScreen].bounds) - 64.0f)];
+    }
+    
+    return _emptyView;
 }
 
 - (UILabel *)titleViewLabel

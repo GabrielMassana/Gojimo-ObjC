@@ -11,7 +11,7 @@
 /**
  iPhone 5 screen width in points.
  */
-static CGFloat const kFSNiPhone5Width = 320.0f;
+static CGFloat const kGOJiPhone5Width = 320.0f;
 
 @interface GOJDeviceSizeService()
 
@@ -54,7 +54,7 @@ static CGFloat const kFSNiPhone5Width = 320.0f;
 
 - (void)calculateFactor
 {
-    self.resizeFactor = CGRectGetWidth([UIScreen mainScreen].bounds) / kFSNiPhone5Width;
+    self.resizeFactor = CGRectGetWidth([UIScreen mainScreen].bounds) / kGOJiPhone5Width;
 }
 
 @end

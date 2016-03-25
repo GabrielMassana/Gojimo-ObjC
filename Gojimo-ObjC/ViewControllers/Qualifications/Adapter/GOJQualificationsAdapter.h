@@ -20,6 +20,6 @@
 
 @property (nonatomic, weak) id<GOJQualificationsAdapterDelegate> delegate;
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) GOJTableView *tableView;
 
 @end

@@ -12,7 +12,7 @@
 
 @interface GOJSubjectsAdapter : NSObject
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) GOJTableView *tableView;
 
 - (instancetype)initWithQualification:(GOJQualification *)qualification;
 

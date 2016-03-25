@@ -33,5 +33,7 @@ static NSString *const GOJLocalDataOperationQueueTypeIdentifier = @"GOJLocalData
     #import "GOJValueOrDefault.h"
     #import "GOJDeviceSizeService.h"
 
+    #import "GOJTableView.h"
+
 #endif
 

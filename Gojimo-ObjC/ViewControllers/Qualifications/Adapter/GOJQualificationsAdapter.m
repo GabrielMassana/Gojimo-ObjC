@@ -28,7 +28,7 @@
 
 #pragma mark - TableView
 
-- (void)setTableView:(UITableView *)tableView
+- (void)setTableView:(GOJTableView *)tableView
 {
     [self willChangeValueForKey:NSStringFromSelector(@selector(tableView))];
     _tableView = tableView;

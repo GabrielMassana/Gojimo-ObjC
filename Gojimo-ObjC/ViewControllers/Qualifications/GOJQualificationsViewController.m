@@ -11,14 +11,20 @@
 #import "GOJQualificationsAPIManager.h"
 #import "GOJQualificationsAdapter.h"
 #import "GOJSubjectsViewController.h"
+#import "GOJQualificationsEmptyView.h"
+#import "GOJQualificationsLoadingView.h"
 
 @interface GOJQualificationsViewController () <GOJQualificationsAdapterDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) GOJTableView *tableView;
 
 @property (nonatomic, strong) GOJQualificationsAdapter *adapter;
 
 @property (nonatomic, strong) UILabel *titleViewLabel;
+
+@property (nonatomic, strong) GOJQualificationsEmptyView *emptyView;
+
+@property (nonatomic, strong) GOJQualificationsLoadingView *loadingView;
 
 @end
 
@@ -40,36 +46,22 @@
     
     self.adapter.tableView = self.tableView;
     
+    [self loadContent];
+    
     [self updateViewConstraints];
-    
-    
-    
-    
-    
-    
-    
-    
-    // with complition.
-    // Remove success and failure
-    [GOJQualificationsAPIManager retrieveQualificationsWithSuccess:^(id result)
-    {
-        
-    }
-                                                           failure:^(NSError *error)
-    {
-        
-    }];
 }
 
 #pragma mark - Subviews
 
-- (UITableView *)tableView
+- (GOJTableView *)tableView
 {
     if (!_tableView)
     {
-        _tableView = [UITableView newAutoLayoutView];
+        _tableView = [GOJTableView newAutoLayoutView];
         
         _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+        _tableView.emptyView = self.emptyView;
+        _tableView.loadingView = self.loadingView;
     }
     
     return _tableView;
@@ -84,6 +76,32 @@
     }
     
     return _adapter;
+}
+
+- (GOJQualificationsEmptyView *)emptyView
+{
+    if (!_emptyView)
+    {
+        _emptyView = [[GOJQualificationsEmptyView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                                  0.0f,
+                                                                                  CGRectGetWidth([UIScreen mainScreen].bounds),
+                                                                                  CGRectGetHeight([UIScreen mainScreen].bounds) - 64.0f)];
+    }
+    
+    return _emptyView;
+}
+
+- (GOJQualificationsLoadingView *)loadingView
+{
+    if (!_loadingView)
+    {
+        _loadingView = [[GOJQualificationsLoadingView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                                      0.0f,
+                                                                                      CGRectGetWidth([UIScreen mainScreen].bounds),
+                                                                                      CGRectGetHeight([UIScreen mainScreen].bounds) - 64.0f)];
+    }
+    
+    return _loadingView;
 }
 
 - (UILabel *)titleViewLabel
@@ -114,6 +132,22 @@
     /*----------------*/
     
     [self.tableView autoPinEdgesToSuperviewEdges];
+}
+
+#pragma mark - LoadContent
+
+- (void)loadContent
+{
+    [self.tableView willLoadContent];
+    
+    [GOJQualificationsAPIManager retrieveQualificationsWithSuccess:^(id result)
+     {
+         [self.tableView didFinishLoadingContent:YES];
+     }
+                                                           failure:^(NSError *error)
+     {
+         [self.tableView didFinishLoadingContent:NO];
+     }];
 }
 
 #pragma mark - GOJQualificationsAdapterDelegate
