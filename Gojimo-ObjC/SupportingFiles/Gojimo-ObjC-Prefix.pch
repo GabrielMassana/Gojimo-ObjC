@@ -28,6 +28,7 @@ static NSString *const GOJLocalDataOperationQueueTypeIdentifier = @"GOJLocalData
 
     #import "NSDateFormatter+GOJServerResponse.h"
     #import "UIFont+GOJFont.h"
+    #import "UIColor+GOJCOlor.h"
 
     #import "GOJValueOrDefault.h"
     #import "GOJDeviceSizeService.h"

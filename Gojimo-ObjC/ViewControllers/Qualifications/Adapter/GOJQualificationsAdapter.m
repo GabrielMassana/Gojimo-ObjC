@@ -10,6 +10,7 @@
 
 #import "GOJQualification.h"
 #import "GOJQualificationsTableViewCell.h"
+#import "GOJQualificationSectionHeaderView.h"
 
 @interface GOJQualificationsAdapter () <UITableViewDataSource, UITableViewDelegate>
 
@@ -39,6 +40,7 @@
     self.tableView.delegate = self;
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.rowHeight = 70.0 * [GOJDeviceSizeService sharedInstance].resizeFactor;
+    self.tableView.sectionHeaderHeight = 35.0 * [GOJDeviceSizeService sharedInstance].resizeFactor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
     /*-------------------*/
@@ -156,6 +158,22 @@
               indexPath:indexPath];
     
     return cell;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[section];
+    
+    
+    
+    GOJQualificationSectionHeaderView *sectionHeaderView = [[GOJQualificationSectionHeaderView alloc] initWithFrame:CGRectMake(0.0f,
+                                                                                                                               0.0f,
+                                                                                                                               CGRectGetWidth([UIScreen mainScreen].bounds),
+                                                                                                                               35.0 * [GOJDeviceSizeService sharedInstance].resizeFactor)
+                                                                                                        countryName:sectionInfo.name];
+
+    
+    return sectionHeaderView;
 }
 
 @end
