@@ -54,6 +54,9 @@
 - (void)prepareForReuse
 {
     [super prepareForReuse];
+    
+    self.backgroundColor = [UIColor whiteColor];
+
 }
 
 @end

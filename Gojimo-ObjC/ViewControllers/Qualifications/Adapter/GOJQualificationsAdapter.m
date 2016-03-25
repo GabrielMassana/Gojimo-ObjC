@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) NSFetchRequest *fetchRequest;
 
+@property (nonatomic, strong)  NSPredicate *predicate;
+
 @end
 
 @implementation GOJQualificationsAdapter
@@ -56,7 +58,7 @@
     {
         _fetchedResultsController = [[CDFTableViewFetchedResultsController alloc] initWithFetchRequest:self.fetchRequest
                                                                                   managedObjectContext:[CDFCoreDataManager sharedInstance].managedObjectContext
-                                                                                    sectionNameKeyPath:nil
+                                                                                    sectionNameKeyPath:@"country.name"
                                                                                              cacheName:nil];
         
         
@@ -75,16 +77,30 @@
                                       inManagedObjectContext:[[CDFCoreDataManager sharedInstance] managedObjectContext]];
     
     fetchRequest.sortDescriptors = self.sortDescriptors;
+    fetchRequest.predicate = self.predicate;
     
     return fetchRequest;
 }
 
+- (NSPredicate *)predicate
+{
+    if (!_predicate)
+    {
+        _predicate = [NSPredicate predicateWithFormat:@"country != nil"];
+    }
+    
+    return _predicate;
+}
+
 - (NSArray *)sortDescriptors
 {
-    NSSortDescriptor *feedItemSort = [NSSortDescriptor sortDescriptorWithKey:@"name"
-                                                                   ascending:YES];
-    
-    return @[feedItemSort];
+    NSSortDescriptor *countryNameSort = [NSSortDescriptor sortDescriptorWithKey:@"country.name"
+                                                               ascending:YES];
+
+    NSSortDescriptor *nameSort = [NSSortDescriptor sortDescriptorWithKey:@"name"
+                                                               ascending:YES];
+
+    return @[countryNameSort, nameSort];
 }
 
 #pragma mark - RegisterCells
@@ -99,7 +115,8 @@
 
 - (void)configureCell:(GOJQualificationsTableViewCell *)cell indexPath:(NSIndexPath *)indexPath
 {
-    GOJQualification *qualification = self.fetchedResultsController.fetchedObjects[indexPath.row];
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[indexPath.section];
+    GOJQualification *qualification = sectionInfo.objects[indexPath.row];
     
     [cell configureWithQualification:qualification];
 }
@@ -108,7 +125,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.fetchedResultsController.fetchedObjects.count;
+    return self.fetchedResultsController.sections[section].numberOfObjects;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.fetchedResultsController.sections.count;
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    id <NSFetchedResultsSectionInfo> sectionInfo = self.fetchedResultsController.sections[section];
+    
+    return sectionInfo.name;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
