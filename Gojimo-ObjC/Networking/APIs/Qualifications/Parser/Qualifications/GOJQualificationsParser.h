@@ -8,8 +8,12 @@
 
 #import "GOJParser.h"
 
+@class GOJQualification;
+
 @interface GOJQualificationsParser : GOJParser
 
 - (NSArray *)parseQualifications:(NSArray *)qualificationsResponse;
+
+- (GOJQualification *)parseQualification:(NSDictionary *)qualificationResponse;
 
 @end

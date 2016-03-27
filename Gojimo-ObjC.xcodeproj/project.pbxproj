@@ -39,11 +39,11 @@
 		7A718A401CA5717E0011FD58 /* GOJSubjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A3F1CA5717E0011FD58 /* GOJSubjectsViewController.m */; };
 		7A718A431CA571990011FD58 /* GOJSubjectsAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A421CA571990011FD58 /* GOJSubjectsAdapter.m */; };
 		7A718A461CA571BB0011FD58 /* GOJSectionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A451CA571BB0011FD58 /* GOJSectionTableViewCell.m */; };
-		7A718A4E1CA58A0B0011FD58 /* Gojimo_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A4D1CA58A0B0011FD58 /* Gojimo_ObjCTests.m */; };
 		7A718A571CA58EA40011FD58 /* GOJTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A561CA58EA40011FD58 /* GOJTableView.m */; };
 		7A718A5D1CA591FF0011FD58 /* GOJQualificationsEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A5C1CA591FF0011FD58 /* GOJQualificationsEmptyView.m */; };
 		7A718A601CA5920F0011FD58 /* GOJQualificationsLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A5F1CA5920F0011FD58 /* GOJQualificationsLoadingView.m */; };
 		7A718A631CA5921E0011FD58 /* GOJSubjectsEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A621CA5921E0011FD58 /* GOJSubjectsEmptyView.m */; };
+		7A718A671CA70A890011FD58 /* GOJQualificationsParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A718A661CA70A890011FD58 /* GOJQualificationsParserTests.m */; };
 		C0039ABB1CA408F700437BBC /* GOJCountry+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */; };
 		C0039ABC1CA408F700437BBC /* GOJCountry.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABA1CA408F700437BBC /* GOJCountry.m */; };
 		C0039AC11CA4090800437BBC /* GOJSubject+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = C0039ABE1CA4090800437BBC /* GOJSubject+CoreDataProperties.m */; };
@@ -126,7 +126,6 @@
 		7A718A441CA571BB0011FD58 /* GOJSectionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJSectionTableViewCell.h; sourceTree = "<group>"; };
 		7A718A451CA571BB0011FD58 /* GOJSectionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJSectionTableViewCell.m; sourceTree = "<group>"; };
 		7A718A4B1CA58A0B0011FD58 /* Gojimo-ObjCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gojimo-ObjCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A718A4D1CA58A0B0011FD58 /* Gojimo_ObjCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Gojimo_ObjCTests.m; sourceTree = "<group>"; };
 		7A718A4F1CA58A0B0011FD58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A718A551CA58EA40011FD58 /* GOJTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJTableView.h; sourceTree = "<group>"; };
 		7A718A561CA58EA40011FD58 /* GOJTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJTableView.m; sourceTree = "<group>"; };
@@ -136,6 +135,7 @@
 		7A718A5F1CA5920F0011FD58 /* GOJQualificationsLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsLoadingView.m; sourceTree = "<group>"; };
 		7A718A611CA5921E0011FD58 /* GOJSubjectsEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJSubjectsEmptyView.h; sourceTree = "<group>"; };
 		7A718A621CA5921E0011FD58 /* GOJSubjectsEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJSubjectsEmptyView.m; sourceTree = "<group>"; };
+		7A718A661CA70A890011FD58 /* GOJQualificationsParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOJQualificationsParserTests.m; sourceTree = "<group>"; };
 		C0039AB71CA408F700437BBC /* GOJCountry+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GOJCountry+CoreDataProperties.h"; sourceTree = "<group>"; };
 		C0039AB81CA408F700437BBC /* GOJCountry+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GOJCountry+CoreDataProperties.m"; sourceTree = "<group>"; };
 		C0039AB91CA408F700437BBC /* GOJCountry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOJCountry.h; sourceTree = "<group>"; };
@@ -616,7 +616,7 @@
 		7A718A4C1CA58A0B0011FD58 /* Gojimo-ObjCTests */ = {
 			isa = PBXGroup;
 			children = (
-				7A718A4D1CA58A0B0011FD58 /* Gojimo_ObjCTests.m */,
+				7A718A641CA70A6A0011FD58 /* Parsers */,
 				7A718A4F1CA58A0B0011FD58 /* Info.plist */,
 			);
 			path = "Gojimo-ObjCTests";
@@ -647,6 +647,22 @@
 				7A718A5C1CA591FF0011FD58 /* GOJQualificationsEmptyView.m */,
 			);
 			path = EmptyView;
+			sourceTree = "<group>";
+		};
+		7A718A641CA70A6A0011FD58 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A651CA70A6A0011FD58 /* Qualifications */,
+			);
+			path = Parsers;
+			sourceTree = "<group>";
+		};
+		7A718A651CA70A6A0011FD58 /* Qualifications */ = {
+			isa = PBXGroup;
+			children = (
+				7A718A661CA70A890011FD58 /* GOJQualificationsParserTests.m */,
+			);
+			path = Qualifications;
 			sourceTree = "<group>";
 		};
 		C0039AC31CA42CAC00437BBC /* Country */ = {
@@ -918,7 +934,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A718A4E1CA58A0B0011FD58 /* Gojimo_ObjCTests.m in Sources */,
+				7A718A671CA70A890011FD58 /* GOJQualificationsParserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
