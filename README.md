@@ -46,6 +46,9 @@ I used four of [my own pods in Cocoapods](https://cocoapods.org/owners/10374).
 #### Optional requirements
 
 i. Using the data provided to its full potential by taking advantage of fields like colour for subjects.
+
 ii. Making the GUI as appealing and responsive as possible.
+
 iii. Storing the data locally and refresh from the server as requested, taking advantage of the HTTP headers to avoid downloads of non-stale data.
+
 iv. Unit testing your code.
