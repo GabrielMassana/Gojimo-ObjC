@@ -25,11 +25,11 @@ The project is integrated with [Travis-CI](https://travis-ci.org/GabrielMassana/
 
 I used four of [my own pods in Cocoapods](https://cocoapods.org/owners/10374).   
    
-- **CoreDataFullStack**. A project to simplify the use of Core Data.
+- **CoreDataFullStack**. A project to simplify the use of `Core Data`.
 - **CoreOperation**. Small wrapper project to simplify `NSOperation` and `NSOperationQueue`.
-- **CoreNetworking**. A small project that simplifies NSURLSession.
-- **ButtonBackgroundColor**. Category to handle the background color of a UIButton in normal and highlighted state.
-- **ColorWithHex**. Swift Extension to convert hexadecimal values into UIColor Objects. This is my first pod in Swift.
+- **CoreNetworking**. A small project that simplifies `NSURLSession`.
+- **ButtonBackgroundColor**. Category to handle the background color of a `UIButton` in normal and highlighted state.
+- **ColorWithHex**. Swift Extension to convert hexadecimal values into `UIColor` Objects. This is my first pod in Swift.
 	
 ### Third party Pods
 
