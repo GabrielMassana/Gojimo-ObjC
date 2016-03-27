@@ -13,8 +13,8 @@
 /**
  View to display when the Data Source View is empty.
  */
-
 @property (nonatomic, strong) UIView *emptyView;
+
 /**
  View to display when the Data Source View is loading.
  */
