@@ -12,8 +12,16 @@
 
 @interface GOJSubjectsAdapter : NSObject
 
+/**
+ Table view to display data.
+ */
 @property (nonatomic, strong) GOJTableView *tableView;
 
+/**
+ Main init for the adapter with a qualification.
+ 
+ @param qualification - qualification to update the view controller.
+ */
 - (instancetype)initWithQualification:(GOJQualification *)qualification;
 
 @end

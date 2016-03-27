@@ -14,16 +14,34 @@
 
 @interface GOJSubjectsViewController ()
 
+/**
+ Table view to display data.
+ */
 @property (nonatomic, strong) GOJTableView *tableView;
 
+/**
+ Adapter to  manage the common logic of the tableView.
+ */
 @property (nonatomic, strong) GOJSubjectsAdapter *adapter;
 
+/**
+ NavigationItem titleView view.
+ */
 @property (nonatomic, strong) UILabel *titleViewLabel;
 
+/**
+ The GOJQualification to be show in the view controller.
+ */
 @property (nonatomic, strong) GOJQualification *qualification;
 
+/**
+ Back button item to be placed on the NavigationItem.
+ */
 @property (nonatomic, strong) UIBarButtonItem *backButton;
 
+/**
+ Empty View to be shown when no data in the Table View.
+ */
 @property (nonatomic, strong) GOJSubjectsEmptyView *emptyView;
 
 @end

@@ -15,15 +15,43 @@
 
 @interface GOJSubjectsAdapter () <UITableViewDataSource, UITableViewDelegate>
 
+/**
+ Used to connect the TableView with Core Data.
+ */
 @property (nonatomic, strong) CDFTableViewFetchedResultsController *fetchedResultsController;
 
+/**
+ Sort Descriptors to sort how characters should be ordered.
+ */
 @property (nonatomic, strong) NSArray *sortDescriptors;
 
+/**
+ Fetch request for retrieving qualifications.
+ */
 @property (nonatomic, strong) NSFetchRequest *fetchRequest;
 
+/**
+ Predicate to filter the data.
+ */
 @property (nonatomic, strong)  NSPredicate *predicate;
 
+/**
+ Qualification to update the view controller.
+ */
 @property (nonatomic, strong) GOJQualification *qualification;
+
+/**
+ Configure the cell.
+ 
+ @param cell - cell to be configured.
+ @param indexPath - cell indexPath.
+ */
+- (void)configureCell:(GOJSectionTableViewCell *)cell indexPath:(NSIndexPath *)indexPath;
+
+/**
+ Register the cells to be used in the table view.
+ */
+- (void)registerCells;
 
 @end
 

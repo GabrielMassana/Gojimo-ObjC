@@ -12,8 +12,19 @@
 
 @interface GOJQualificationSectionHeaderView ()
 
+/**
+ Label to show the name of the country.
+ */
 @property (nonatomic, strong) UILabel *nameLabel;
+
+/**
+ Image view o show the country flag.
+ */
 @property (nonatomic, strong) UIImageView *flagImageView;
+
+/**
+ The country name to be showed.
+ */
 @property (nonatomic, strong) NSString *countryName;
 
 @end

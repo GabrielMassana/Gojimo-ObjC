@@ -10,7 +10,14 @@
 
 @interface GOJQualificationsLoadingView ()
 
+/**
+ Title text Label with information for the loading view.
+ */
 @property (nonatomic, strong) UILabel *titleLabel;
+
+/**
+ Activity indicator.
+ */
 @property (nonatomic, strong) UIActivityIndicatorView *spinner;
 
 @end
@@ -25,8 +32,6 @@
     
     if (self)
     {
-//        self.backgroundColor = [UIColor goj_alto];
-        
         [self addSubview:self.titleLabel];
         [self addSubview:self.spinner];
     }

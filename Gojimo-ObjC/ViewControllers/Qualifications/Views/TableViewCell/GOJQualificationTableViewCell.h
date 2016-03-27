@@ -12,6 +12,11 @@
 
 @interface GOJQualificationTableViewCell : GOJTableViewCell
 
+/**
+ Method to configure the cell with a given qualification.
+ 
+ @param qualification - qualification to update the cell.
+ */
 - (void)configureWithQualification:(GOJQualification *)qualification;
 
 @end

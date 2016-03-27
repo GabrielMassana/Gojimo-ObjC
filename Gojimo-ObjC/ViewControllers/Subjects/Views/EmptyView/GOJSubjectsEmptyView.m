@@ -10,6 +10,9 @@
 
 @interface GOJSubjectsEmptyView ()
 
+/**
+ Title text Label with information for the empty view.
+ */
 @property (nonatomic, strong) UILabel *titleLabel;
 
 @end

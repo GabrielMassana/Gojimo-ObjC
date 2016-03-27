@@ -16,15 +16,35 @@
 
 @interface GOJQualificationsViewController () <GOJQualificationsAdapterDelegate>
 
+/**
+ Table view to display data.
+ */
 @property (nonatomic, strong) GOJTableView *tableView;
 
+/**
+ Adapter to  manage the common logic of the tableView.
+ */
 @property (nonatomic, strong) GOJQualificationsAdapter *adapter;
 
+/**
+ NavigationItem titleView view.
+ */
 @property (nonatomic, strong) UILabel *titleViewLabel;
 
+/**
+ Empty View to be shown when no data in the Table View.
+ */
 @property (nonatomic, strong) GOJQualificationsEmptyView *emptyView;
 
+/**
+ Loading View to be shown when data isdownloading in the Table View from the API service.
+ */
 @property (nonatomic, strong) GOJQualificationsLoadingView *loadingView;
+
+/**
+ Download and load the content from the API service.
+ */
+- (void)loadContent;
 
 @end
 

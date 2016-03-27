@@ -12,7 +12,14 @@
 
 @interface GOJSectionTableViewCell ()
 
+/**
+ Separation line for the cells.
+ */
 @property (nonatomic, strong) UIView *separationLine;
+
+/**
+ Section name label.
+ */
 @property (nonatomic, strong) UILabel *titleLabel;
 
 @end

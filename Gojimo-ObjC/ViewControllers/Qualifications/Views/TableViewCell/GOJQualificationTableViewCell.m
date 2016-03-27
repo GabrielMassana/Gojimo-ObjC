@@ -12,8 +12,19 @@
 
 @interface GOJQualificationTableViewCell ()
 
+/**
+ Separation line for the cells.
+ */
 @property (nonatomic, strong) UIView *separationLine;
+
+/**
+ Qualification name label.
+ */
 @property (nonatomic, strong) UILabel *nameLabel;
+
+/**
+ Total number of subjects for this qualification Label.
+ */
 @property (nonatomic, strong) UILabel *totalSubjects;
 
 @end
