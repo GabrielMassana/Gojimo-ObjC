@@ -6,7 +6,7 @@
 
 # How and why
 
-### Technical Requirements
+### Technical Decisions
 
  - Xcode 7.2
  - Language: Objective-C
