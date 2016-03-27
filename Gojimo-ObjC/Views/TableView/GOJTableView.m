@@ -91,8 +91,6 @@
         }
     }
     
-    
-    
     return hasData;
 }
 
