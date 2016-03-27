@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ Application colors.
+ */
 @interface UIColor (GOJCOlor)
 
 + (UIColor *)goj_alto;

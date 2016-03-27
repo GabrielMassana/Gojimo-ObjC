@@ -10,6 +10,12 @@
 
 @interface GOJQualificationsAPIManager : GOJAPIManager
 
+/**
+ Retrieve qualifications from the API service.
+ 
+ @param success - a success block.
+ @param failure - a failure block.
+ */
 + (void)retrieveQualificationsWithSuccess:(GOJNetworkingOnSuccess)success
                                   failure:(GOJNetworkingOnFailure)failure;
 

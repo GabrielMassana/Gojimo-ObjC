@@ -10,7 +10,6 @@
 
 static NSString *const kGOJDateFormatterKey = @"kGOJDateFormatterKey";
 
-
 @implementation NSDateFormatter (GOJServerResponse)
 
 #pragma mark - DateFormatter

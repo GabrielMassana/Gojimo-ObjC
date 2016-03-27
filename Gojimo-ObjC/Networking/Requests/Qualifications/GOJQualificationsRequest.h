@@ -10,6 +10,9 @@
 
 @interface GOJQualificationsRequest : GOJRequest
 
-+ (instancetype)qualificationsrequest;
+/**
+ Creates a qualifications Request.
+ */
++ (instancetype)qualificationsRequest;
 
 @end

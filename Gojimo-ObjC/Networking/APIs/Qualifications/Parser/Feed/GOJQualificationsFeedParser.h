@@ -12,6 +12,13 @@
 
 @interface GOJQualificationsFeedParser : GOJParser
 
+/**
+ Parser for the qualifications feed.
+ 
+ @param qualificationsResponse - a full API response for qualifications.
+ 
+ @return a GOJQualificationsFeed object.
+ */
 - (GOJQualificationsFeed *)parseFeed:(NSArray *)qualificationsResponse;
 
 @end

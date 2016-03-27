@@ -15,6 +15,9 @@ static CGFloat const kGOJiPhone5Width = 320.0f;
 
 @interface GOJDeviceSizeService()
 
+/**
+ The factor used to resize assets and fonts.
+ */
 @property (nonatomic, assign, readwrite) CGFloat resizeFactor;
 
 @end

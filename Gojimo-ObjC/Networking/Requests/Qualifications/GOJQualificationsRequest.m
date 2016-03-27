@@ -10,7 +10,7 @@
 
 @implementation GOJQualificationsRequest
 
-+ (instancetype)qualificationsrequest
++ (instancetype)qualificationsRequest
 {
     GOJQualificationsRequest *request = [self requestForAPI];
     

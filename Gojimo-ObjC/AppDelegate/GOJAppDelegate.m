@@ -12,7 +12,15 @@
 
 @interface GOJAppDelegate () <CDFCoreDataManagerDelegate>
 
+/**
+ Root Navigation Controller for the Aplication
+ */
 @property (nonatomic, strong) GOJRootNavigationController *rootNavigationController;
+
+/**
+ Register Operation Queues to be used during the app life.
+ */
+- (void)registerOperationQueues;
 
 @end
 
@@ -87,18 +95,6 @@
 
 - (void)registerOperationQueues
 {
-    //Network UI
-    
-    //Network Background
-    NSOperationQueue *networkDataOperationQueue = [[NSOperationQueue alloc] init];
-    networkDataOperationQueue.qualityOfService = NSQualityOfServiceBackground;
-    networkDataOperationQueue.maxConcurrentOperationCount = 1;
-    networkDataOperationQueue.maxConcurrentOperationCount = NSOperationQueueDefaultMaxConcurrentOperationCount;
-    
-    [[COMOperationQueueManager sharedInstance] registerOperationQueue:networkDataOperationQueue
-                                             operationQueueIdentifier:GOJNetworkDataOperationQueueTypeIdentifier];
-    
-    
     //Local Data
     NSOperationQueue *localDataOperationQueue = [[NSOperationQueue alloc] init];
     localDataOperationQueue.qualityOfService = NSQualityOfServiceBackground;
@@ -107,10 +103,6 @@
     
     [[COMOperationQueueManager sharedInstance] registerOperationQueue:localDataOperationQueue
                                              operationQueueIdentifier:GOJLocalDataOperationQueueTypeIdentifier];
-    
-    //Media Download
-    
-    //Core Data Update
 }
 
 #pragma mark - CDFCoreDataManagerDelegate

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ Application fonts.
+ */
 @interface UIFont (GOJFont)
 
 + (UIFont *)goj_tradeGothicLightWithSize:(CGFloat)size;

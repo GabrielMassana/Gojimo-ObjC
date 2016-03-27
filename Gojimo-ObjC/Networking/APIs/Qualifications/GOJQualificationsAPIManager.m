@@ -16,7 +16,7 @@
 + (void)retrieveQualificationsWithSuccess:(GOJNetworkingOnSuccess)success
                                   failure:(GOJNetworkingOnFailure)failure
 {
-    GOJQualificationsRequest *request = [GOJQualificationsRequest qualificationsrequest];
+    GOJQualificationsRequest *request = [GOJQualificationsRequest qualificationsRequest];
     
     CNMURLSessionDataTask *task = [[CNMSession defaultSession] dataTaskFromRequest:request];
 
