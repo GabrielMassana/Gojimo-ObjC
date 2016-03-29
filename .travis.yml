@@ -7,4 +7,4 @@ before_install:
    - sudo gem install cocoapods -v '0.39.0'  
 
 script: 
-   xcodebuild -scheme Gojimo-ObjC -destination 'platform=iOS Simulator,name=iPhone Retina (4-inch),OS=9.2' test
+   xctool -workspace Gojimo-ObjC.xcworkspace -scheme Gojimo-ObjC test -sdk iphonesimulator		
